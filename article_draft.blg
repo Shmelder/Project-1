@@ -1,0 +1,86 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: article_draft.aux
+The style file: plainnat.bst
+Database file #1: paper_bib.bib
+Warning--empty journal in donoho_higher_2004
+Warning--empty year in donoho_higher_2004
+Warning--empty year in donoho_higher_2004
+Warning--empty journal in dunn_estimation_1959
+Warning--empty year in dunn_estimation_1959
+Warning--empty journal in dunn_multiple_1961
+Warning--empty year in dunn_multiple_1961
+Warning--empty booktitle in gupta_inequalitites_1972
+Warning--empty year in gupta_inequalitites_1972
+Warning--empty year in gupta_inequalitites_1972
+Warning--empty journal in hochberg_sharper_1988
+Warning--empty year in hochberg_sharper_1988
+Warning--empty year in hochberg_sharper_1988
+Warning--empty journal in holm_simple_1979
+Warning--empty year in holm_simple_1979
+Warning--empty year in holm_simple_1979
+Warning--empty journal in mckeague_adaptive_2015
+Warning--empty year in mckeague_adaptive_2015
+Warning--empty year in mckeague_adaptive_2015
+Warning--empty year in miller_simultaneous_1981
+Warning--empty year in miller_simultaneous_1981
+Warning--empty journal in neyman_jerzy_ix._1933
+Warning--empty year in neyman_jerzy_ix._1933
+Warning--empty year in neyman_jerzy_ix._1933
+Warning--empty journal in omelka_testing_2012
+Warning--empty year in omelka_testing_2012
+Warning--empty year in omelka_testing_2012
+Warning--empty journal in pan_powerful_2014
+Warning--empty year in pan_powerful_2014
+Warning--empty year in pan_powerful_2014
+Warning--empty journal in s._holland_improved_1988
+Warning--empty year in s._holland_improved_1988
+Warning--empty year in s._holland_improved_1988
+Warning--empty journal in xu_adaptive_2016
+Warning--empty year in xu_adaptive_2016
+Warning--empty year in xu_adaptive_2016
+Warning--empty journal in zhang_comment_2015
+Warning--empty year in zhang_comment_2015
+Warning--empty year in zhang_comment_2015
+You've used 14 entries,
+            2773 wiz_defined-function locations,
+            693 strings with 7745 characters,
+and the built_in function-call counts, 6986 in all, are:
+= -- 673
+> -- 329
+< -- 10
++ -- 114
+- -- 99
+* -- 634
+:= -- 1072
+add.period$ -- 77
+call.type$ -- 14
+change.case$ -- 75
+chr.to.int$ -- 13
+cite$ -- 67
+duplicate$ -- 286
+empty$ -- 557
+format.name$ -- 123
+if$ -- 1419
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 15
+newline$ -- 112
+num.names$ -- 56
+pop$ -- 183
+preamble$ -- 1
+purify$ -- 61
+quote$ -- 0
+skip$ -- 162
+stack$ -- 0
+substring$ -- 340
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 149
+warning$ -- 39
+while$ -- 66
+width$ -- 0
+write$ -- 233
+(There were 39 warnings)
