@@ -23,7 +23,7 @@
 \newcommand{\norm}{f}
 \newcommand{\rvoo}{x}
 \newcommand{\disto}{P}
-\newcommand{\rvv}{Y}
+\newcommand{\rvv}{Z}
 \newcommand{\distv}{Q}
 
 \begin{document}
@@ -75,7 +75,7 @@ There will be three settings for the $\beta$'s in the data generating model:
 \begin{align*}
     \log(Pr(Y = 1 | W)) = \beta_0 + W^\top \beta
 \end{align*}
-In one setting $\beta = 0$.  In the second only one or two parts entries of $\beta$ will be non-zero.  In the last setting, many of the entries of $\beta$ will be non-zero (possibly $70$ or $80$ percent of the entries). 
+In one setting $\beta = 0$.  In the second only one or two entries of $\beta$ will be non-zero.  In the last setting, many of the entries of $\beta$ will be non-zero (possibly $70$ or $80$ percent of the entries). 
 
 \subsection{Marginal Structural Model}
 For this marginal structural model, we are interested in if the average treatment is modified by any covariates.  The marginal structural model for each $W_j$ is defined by
@@ -93,21 +93,21 @@ The parameter of interest is $\beta_3^*$
 
 \section{Proposed testing procedure}
 \label{sec:prop_test_proc}
-Denote the estimator of the $\boldsymbol{\psi}$ by $\hat{\boldsymbol{\Psi}}(\boldsymbol{\rvo})$, let $\hat{\boldsymbol{\psi}} \equiv \hat{\boldsymbol{\Psi}}(x)$ be an estimate of $\boldsymbol{\psi}$, and suppose that $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges in law to some distribution $\distv$ when $\disto \in \mathscr{M}_0$.  Any test of $\disto \in \mathscr{M}_0$ can be characterized by an acceptance region $\Theta_0 \subset \mathbb{R}^d$. The region $\Theta_0$ can be chosen so the probability of rejection under the null will be controlled asymptotically:
+Denote the estimator of the $\boldsymbol{\psi}$ by $\hat{\boldsymbol{\Psi}}(\boldsymbol{\rvo})$, let $\hat{\boldsymbol{\psi}} \equiv \hat{\boldsymbol{\Psi}}(x)$ be an estimate of $\boldsymbol{\psi}$, and suppose that $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges in law to some distribution $\distv(P)$ when $\disto \in \mathscr{M}_0$.  Any test of $\disto \in \mathscr{M}_0$ can be characterized by an acceptance region $\Theta_0(\disto) \subset \mathbb{R}^d$. The region $\Theta_0$ can be chosen so the probability of rejection under the null will be controlled asymptotically:
 \begin{align}
-	Pr(\distv \in \Theta_0) = 1 - \alpha \text{ under } H_0. \label{eqn:alpha_rej}
+  Pr(\rvv \in \Theta_0(P)) = 1 - \alpha \text{ for every } P \in M_0. \label{eqn:alpha_rej}
 \end{align}
-Equation \eqref{eqn:alpha_rej} is satisfied by many different acceptance regions, but for now, consider an acceptance region that is a $\ell_2$ ball centered at the origin. To define the region, a radius such that \eqref{eqn:alpha_rej} is satisfied can be selected. 
+There are infinitely many regions satisfying \eqref{eqn:alpha_rej}.  We focus on a class of regions defined using $\ell_p$ norms. First consider the $\ell_2$ norm.  This creates an acceptance region that is a $\ell_2$ ball centered at the origin. For this region to satisfy \eqref{eqn:alpha_rej}, let the radius of our ball $r_\alpha$ satisfy: 
 
-To find this radius, one could solve the following equation:
 \begin{align*}
-	r_\alpha = \min\left\{r : Pr(||\rvv||_2 \leq r) \geq 1 - \alpha \right\} \text{ where } \rvv \sim \distv 
+	r_\alpha = \min\left\{r : Pr(||\rvv||_2 \leq r) \geq 1 - \alpha \right\} \text{ where } \rvv \sim \distv.
 \end{align*}
 Above we have converted a problem of defining a region to a problem of defining a real value by using a norm.  This same idea can be used when defining a test:
 \begin{align*}
 	\text{reject } H_0 \text{ if } ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2 \geq r_\alpha.
 \end{align*}
-Similarly, $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$ would provide a p-value. The quantity could also be used for a test, and since we know $Pr_Q(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\Psi}}(\rvo)||_2)$ will be uniformly distributed on $(0, 1)$ asymptotically under the null, we can reject $H_0$ whenever this value is less than $\alpha$.
+Similarly, $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$ would provide a p-value.
+%The quantity could also be used for a test, and since we know $Pr_Q(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\Psi}}(\rvo)||_2)$ will be uniformly distributed on $(0, 1)$ asymptotically under the null, we can reject $H_0$ whenever this value is less than $\alpha$.
 
 
 % As an example, a test is defined by a norm $p$ and level $\alpha$ which define the cutoff value;
@@ -123,15 +123,16 @@ Similarly, $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$ would pr
 	\label{fig:figure1}
 \end{figure}
 
-\subsection{Creating a rejection region using a function}
+\subsection{\textcolor{blue}{Creating a rejection region using a function}}
 % Note that above while our test was defined by rejecting or accepting based on if $\sqrt{n}\hat{\psi} \in \Theta_0$, we can also think about defining our test decision based on if some function, say $\Gamma_P(x, ||\cdot||)$ that maps from a value and distribution in $\mathbb{R}^d$, and a norm $||\cdot||$ to a real value is greater than zero.
-As alluded to above, any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x, ||\cdot||)$ that maps from a value and distribution in $\mathbb{R}^d$, and a norm $||\cdot||$ to a real value.  To obtain p-values and define the test, one compares $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||)$ where $\rvv$ is a random variable with distribution $\distv$. Trivially, this function could be defined as: $\Gamma_\distv(x, ||\cdot||) = I\{x \in \Theta_0(\distv)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
 
-In the example above, $\Gamma_\distv(x, ||\cdot||) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv, ||\cdot||)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
+As alluded to above, any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$, and a norm $||\cdot||$ to a real value.  To obtain p-values and define the test, compare $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to $\Gamma_\distv(\rvv)$ where $\rvv$ is a random variable with distribution $\distv$. Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
+
+In the example above, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
 \begin{align*}
-	\Gamma_\distv(x, ||\cdot||) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv.
+	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv.
 \end{align*}
-In this scenario, the test can be carried out by comparing $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||).$
+In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||).$
 
 % This test statistic was then compared to the estimated limiting distribution of the test statistic under the null.  The key components of this test were to create a real valued summary of the observed test statistic, and compare this test statistic to draws of the test statistic under the null.  In the previous example, the test statistic was the quantile of the $\ell_2$ norm of our vector of parameter estimates.  We already know the distribution of this statistic is uniform from zero to one under the null, so calculating the p-value is trivial.
 
@@ -184,7 +185,7 @@ When there is a fixed number of covariates, the Cramer-Wold device can be used t
 \begin{align*}
     \sqrt{n}\left(\hat{\boldsymbol{\psi}} - \boldsymbol{\psi}\right) \xrightarrow{d} Z \sim N\left(0, \Sigma\right)
 \end{align*}
-Under $H_0$, $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges to $Z$, and one can approximate $\Sigma$ with $\widehat{\Sigma} = \frac{1}{n}\sum_{i = 1}^n D(\boldsymbol{x}_i)^\top D(\boldsymbol{x}_i)$.  Thus, in practice we will use an estimate of $\distv$, $\hat{\distv}$ which is distributed $N(0, \widehat{\Sigma})$ in place of $\distv$, and the random variable $\hat{\rvv}$ with distribution $\hat{\distv}$ in place of $\rvv$.  Thus, the test statistic will be $\Gamma_{\hat{\distv}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ and will be compared to $\Gamma_{\hat{\distv}}(\hat{\rvv})$.
+Under $H_0$, $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges to $Z$, and $\Sigma$ can be approximates with $\widehat{\Sigma} = \frac{1}{n}\sum_{i = 1}^n D(\boldsymbol{x}_i)^\top D(\boldsymbol{x}_i)$.  Thus, in practice we will use an estimate of $\distv$, $\hat{\distv}$ which is distributed $N(0, \widehat{\Sigma})$ in place of $\distv$, and the random variable $\hat{\rvv}$ with distribution $\hat{\distv}$ in place of $\rvv$.  Thus, the test statistic will be $\Gamma_{\hat{\distv}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ and will be compared to $\Gamma_{\hat{\distv}}(\hat{\rvv})$.
 
 \subsection{Using a permutation test for the test statistic}
 While the above approach will work asymptotically, there can be issues for small sample sizes.  To avoid inflated type one error, a permutation based test can be used.  Here, $\hat{\distv}^\#$ is used to define $\Gamma$, and the test will compare $\Gamma_{\hat{\distv}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ to $\Gamma_{\hat{\distv}}(\rvv^\#)$. To determine $\hat{\distv}^\#$, the $Y$'s from the observed data are permuted before calculating $\widehat \Sigma$.  Draws from $\rvv^\#$ are taken by permuting all of the $Y$'s of the observed data.  \textcolor{blue}{There are a few more complications here that need to be figured out.}

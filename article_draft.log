@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  5 DEC 2019 19:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  9 DEC 2019 15:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.tex
-(/Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.tex
+**/Users/adamelder/Project-1/article_draft.tex
+(/Users/adamelder/Project-1/article_draft.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -697,7 +697,7 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip75
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.aux)
+) (/Users/adamelder/Project-1/article_draft.aux)
 \openout1 = `article_draft.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
@@ -812,18 +812,18 @@ File: figure_code/pwr_cmp.jpeg Graphic file (type jpg)
 <use figure_code/pwr_cmp.jpeg>
 Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 121.
 (pdftex.def)             Requested size: 542.02501pt x 195.29347pt.
- [2] [3 </Users/adamelder/Dropbox/Adam_Project/article_draft/figure_code/pwr_cmp.jpeg>] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 272--279
+ [2] [3 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 273--280
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 279.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 280.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 279.
- [5] (/Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.bbl
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 280.
+ [5] (/Users/adamelder/Project-1/article_draft.bbl
 Underfull \hbox (badness 6047) in paragraph at lines 25--32
 []\OT1/cmr/m/n/10 Olive Jean Dunn.  Mul-ti-ple com-par-isons among means.  56(293):52--64, b.  ISSN 0162-1459.  doi:
  []
@@ -863,17 +863,17 @@ Underfull \hbox (badness 1478) in paragraph at lines 93--99
 \OT1/cmr/m/n/10 for rare vari-ants.  197(4):1081--1095.  ISSN 0016-6731, 1943-2631.  doi: 10.1534/ge-net-ics.114.165035.  URL
  []
 
-[6]) [7] (/Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.aux) ) 
+[6]) [7] (/Users/adamelder/Project-1/article_draft.aux) ) 
 Here is how much of TeX's memory you used:
  25479 strings out of 492616
- 485186 string characters out of 6129482
+ 484911 string characters out of 6129482
  537513 words of memory out of 5000000
  29016 multiletter control sequences out of 15000+600000
  539922 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,18n,73p,1223b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,18n,73p,1198b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/adamelder/Dropbox/Adam_Project/article_draft/article_draft.pdf (7 pages, 339133 bytes).
+Output written on /Users/adamelder/Project-1/article_draft.pdf (7 pages, 339169 bytes).
 PDF statistics:
  96 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
