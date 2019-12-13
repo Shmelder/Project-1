@@ -95,20 +95,23 @@ The parameter of interest is $\beta_3^*$
 
 \section{Proposed testing procedure}
 \label{sec:prop_test_proc}
-Denote the estimator of the $\boldsymbol{\psi}$ by $\hat{\boldsymbol{\Psi}}(\boldsymbol{\rvo})$, let $\hat{\boldsymbol{\psi}} \equiv \hat{\boldsymbol{\Psi}}(x)$ be an estimate of $\boldsymbol{\psi}$, and suppose that $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges in law to some distribution $\distv(P)$ when $\disto \in \mathscr{M}_0$.  Any test of $\disto \in \mathscr{M}_0$ can be characterized by an acceptance region $\Theta_0(\disto) \subset \mathbb{R}^d$. The region $\Theta_0$ can be chosen so the probability of rejection under the null will be controlled asymptotically:
+Denote the estimator of the $\boldsymbol{\psi}$ by $\hat{\boldsymbol{\Psi}}(\boldsymbol{\rvo})$ and let $\hat{\boldsymbol{\psi}} \equiv \hat{\boldsymbol{\Psi}}(x)$ be an estimate of $\boldsymbol{\psi}$. Suppose that $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges in law to some distribution $\distv(P)$ when $\disto \in \mathscr{M}_0$.  Any test of $\disto \in \mathscr{M}_0$ can be characterized by an acceptance region $\Theta_0(\disto) \subset \mathbb{R}^d$. The region $\Theta_0(\disto)$ can be chosen so the probability of rejection under the null is controlled asymptotically:
 \begin{align}
-  Pr(\rvv \in \Theta_0(P)) = 1 - \alpha \text{ for every } P \in M_0. \label{eqn:alpha_rej}
+  Pr(\rvv \in \Theta_0(P)) = 1 - \alpha \text{ for every } P \in M_0 \text{ where } \rvv \sim \distv(\disto).\label{eqn:alpha_rej}
 \end{align}
-There are infinitely many regions satisfying \eqref{eqn:alpha_rej}.  We focus on a class of regions defined using $\ell_p$ norms. First consider the $\ell_2$ norm.  This creates an acceptance region that is a $\ell_2$ ball centered at the origin. For this region to satisfy \eqref{eqn:alpha_rej}, let the radius of our ball $r_\alpha$ satisfy: 
-
+While there are infinitely many regions satisfying \eqref{eqn:alpha_rej},  we focus on a class of regions defined using $\ell_p$ norms. For simplicity, first consider regions defined using an $\ell_2$ norm:
 \begin{align*}
-	r_\alpha = \min\left\{r : Pr(||\rvv||_2 \leq r) \geq 1 - \alpha \right\} \text{ where } \rvv \sim \distv.
+	\Theta_0(r) = \left\{\omega : ||\omega||_2 \leq r\right\}
 \end{align*}
-Above we have converted a problem of defining a region to a problem of defining a real value by using a norm.  This same idea can be used when defining a test:
+A region satisfying \eqref{eqn:alpha_rej} has a radius: 
+\begin{align*}
+	r_\alpha(\disto) = \min\left\{r : Pr_{\distv(\disto)}(||\rvv||_2 \leq r) \geq 1 - \alpha \right\}.
+\end{align*}
+By constraining the possible regions we consider, we can now define our test in a simple algebraic form:
 \begin{align*}
 	\text{reject } H_0 \text{ if } ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2 \geq r_\alpha.
 \end{align*}
-Similarly, $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$ would provide a p-value.
+Similarly, p-values can now be simply defined as $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$.
 %The quantity could also be used for a test, and since we know $Pr_Q(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\Psi}}(\rvo)||_2)$ will be uniformly distributed on $(0, 1)$ asymptotically under the null, we can reject $H_0$ whenever this value is less than $\alpha$.
 
 
@@ -125,12 +128,12 @@ Similarly, $Pr(||\rvv||_2 \geq ||\sqrt{n} \hat{\boldsymbol{\psi}}||_2)$ would pr
 	\label{fig:figure1}
 \end{figure}
 
-\subsection{\textcolor{blue}{Creating a rejection region using a function}}
+% \subsection{\textcolor{blue}{Creating a rejection region using a function}}
 % Note that above while our test was defined by rejecting or accepting based on if $\sqrt{n}\hat{\psi} \in \Theta_0$, we can also think about defining our test decision based on if some function, say $\Gamma_P(x, ||\cdot||)$ that maps from a value and distribution in $\mathbb{R}^d$, and a norm $||\cdot||$ to a real value is greater than zero.
 
-As alluded to above, any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$. While it is not always required, most $\Gamma$ we consider use some norm $||\cdot||$.  To obtain p-values and define the test, compare $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to $\Gamma_\distv(\rvv)$ where $\rvv$ is a random variable with distribution $\distv$. Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
-
-In the example above, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
+Above we used a norm to constrain the considered rejection regions and allow for a test based on the value of $\sqrt{n}\hat{\boldsymbol{\psi}}$ under the norm and the distribution of $\distv$ under the norm.  However, this approach will also work with more complicated functions. Consider instead of norm, some function $\Gamma_{\distv}(x)$ that maps from a value and distribution in $\mathbb{R}^d$ to $\mathbb{R}$.  The distribution of $\Gamma_\distv(\rvv)$ can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. Consider, for example:
+% any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$.  Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
+% In the previous example, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
 \begin{align*}
 	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv.
 \end{align*}
@@ -140,19 +143,19 @@ In this scenario, the test can be carried out by comparing our test statistic, $
 
 % However, we could consider other test statistics.  One example would be the estimated power of an observation is from the $80\%$ quantile of the limiting distribution under the null.  Here, while smaller values indicate more evidence against the null, the distribution of this test statistic is not as straightforward.  While more difficult, the distribution of this test statistic can be be estimated using a bootstrap.  We can take a single observation from our estimated limiting distribution of $\sqrt{n}\hat{\psi}$ and then find its multiplicative distance from the $80\%$ quantile under the $\ell_2$ norm.  This can be done many times to create a limiting distribution of our test statistic.  A p-value can then be obtained by comparing the test statistic to the bootstrapped test statistics.	
 
-While this way of defining a test allows for many different specifications, it does require that the user chooses a norm.  Figure \ref{fig:figure1} shows that the power a test achieves can depend on the norm chosen.  Consider the case when $d = 2$ and $100$ draws are taken from $Z$.  Cutoffs can be obtained by transforming these data (using the $l_p$ norm) and taking the 95\% quantile of this transformed data. The perimeter of the acceptance region when using the $\ell_2$ and $\ell_{\infty}$ norm are given in red and blue respectively. If $\sqrt{n}\hat{\boldsymbol{\psi}}$ falls within any of the purple regions, using the $\ell_\infty$ norm would result in failing to reject $H_0$ and using the $\ell_2$ norm would result in rejecting $H_0$.  The converse is true for the green regions.  
+While this method for defining tests allows for many different specifications, it often requires users chooses a norm as part of their definition of $\Gamma$.  Figure \ref{fig:figure1} shows that the power a test achieves can depend on the norm chosen.  Consider the case when $d = 2$ and $100$ draws are taken from $Z$.  Cutoffs can be obtained by transforming these data (using the $l_p$ norm) and taking the 95\% quantile of this transformed data. The perimeter of the acceptance region when using the $\ell_2$ and $\ell_{\infty}$ norm are given in red and blue respectively. If $\sqrt{n}\hat{\boldsymbol{\psi}}$ falls within any of the purple regions, using the $\ell_\infty$ norm would result in failing to reject $H_0$ and using the $\ell_2$ norm would result in rejecting $H_0$.  The converse is true for the green regions.  
 
 \subsection{Adaptive selection of a norm}
 In the previous section it was shown that a test can be defined by choosing a summarizing function and norm. However, the choice of norm influences the power of the test. In most scenarios it will not be clear a priori which norm will have maximal power for the true alternative. The procedure proposed in this section adaptively selects a norm and it will be shown that this procedure achieves greater power than a test with a fixed norm, while maintaining type 1 error control.  
 
-This is achieved by defining a $\Gamma$ similar to those defined earlier, except the optimal norm is selected, and the corresponding summary value of $\Gamma$ with the optimal norm is returned.  For example, if we had $p$ different norms, $\norm_1, \dots, \norm_p$ and some summary function $\Gamma_\distv(x, ||\cdot||)$, we would define the adaptive version of $\Gamma$ as
-
+To achieve this, first define $\Gamma_{1, \distv}(x), \dots, \Gamma_{p, \distv}(x)$ as collection of functions in which the functions only differ by the norm used in their definition. Next, define
+% by defining a $\Gamma$ to those defined earlier, except the optimal norm is selected, and the corresponding summary value of $\Gamma$ with the optimal norm is returned.  For example, if we had $p$ different norms, $\norm_1, \dots, \norm_p$ and some summary function $\Gamma_\distv(x, ||\cdot||)$, we would define the adaptive version of $\Gamma$ as
 \begin{align*}
-	\Gamma^*_\distv(x) = \max\left\{\Gamma_\distv(x, \norm_1), \Gamma_\distv(x, \norm_2), \dots, \Gamma_\distv(x, \norm_p)\right\}.
+	\Gamma^*_\distv(x) = \max\left\{\Gamma_{1, \distv}(x), \Gamma_{2, \distv}(x), \dots, \Gamma_{p, \distv}(x)\right\}.
 \end{align*}
 \textcolor{blue}{This will could be the min if smaller values indicate larger distances away from the norm (such as p-values).}  
 
-In many cases, it will be difficult to obtain the exact distribution of $\Gamma_\distv^*(\rvv)$. However, because this distribution is only a function of $\distv$, obtaining very good approximations of $\Gamma_\distv^*(\rvv)$ is possible by taking many draws from $\rvv$, both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\distv(\rvv)$ .
+While it may be difficult to obtain the exact distribution of $\Gamma_\distv^*(\rvv)$ in practice, the distribution is a function of $\distv$, so obtaining very good approximations of $\Gamma_\distv^*(\rvv)$ is possible by taking many draws from $\rvv$. This technique can be used both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\distv(\rvv)$ .
 
 % Let $g_1, \dots, g_k$ be a list candiate norms, and let $\boldsymbol{Z}_1, \dots, \boldsymbol{Z}_B$ and $\boldsymbol{V}_1, \dots, \boldsymbol{V}_B$ independent draws from $Q$.  For each of the possible norms, let a p-value be defined using the following quantity:
 
