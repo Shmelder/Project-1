@@ -86,7 +86,7 @@ For this marginal structural model, we are interested in if the average treatmen
 \end{align*}
 
 \begin{align*}
-(\beta_0^*, \beta_1^*, \beta_2^*, \beta_3^*) = \text{argmin}_{\beta_0, \beta_1, \beta_2, \beta_3}\int\left(\text{logit}\left(Pr(y^{(a)} = 1\right) - (\beta_0 + \beta_1 a + \beta_2w_j + \beta_3 w_j a) \right)^2 dP(y^{(a)}, w, a)
+(\beta_0^*, \beta_1^*, \beta_2^*, \beta_3^*) = \text{argmin}_{\beta_0, \beta_1, \beta_2, \beta_3}\int\left(\text{logit}\left(Pr(Y^{(a)} = 1 | w\right) - (\beta_0 + \beta_1 a + \beta_2w_j + \beta_3 w_j a) \right)^2 dP(w, a)
 \end{align*}
 The parameter of interest is $\beta_3^*$
 \textcolor{blue}{The other $W_j$'s are included in the analysis and are marginalized over, but are not part of the defined model.} I am planning on using the same simulation settings as above, but also including non-changing effects for $a$, but am open to other ideas.
@@ -131,7 +131,12 @@ Similarly, p-values can now be simply defined as $Pr_Q(||\rvv||_2 \geq ||\sqrt{n
 % \subsection{\textcolor{blue}{Creating a rejection region using a function}}
 % Note that above while our test was defined by rejecting or accepting based on if $\sqrt{n}\hat{\psi} \in \Theta_0$, we can also think about defining our test decision based on if some function, say $\Gamma_P(x, ||\cdot||)$ that maps from a value and distribution in $\mathbb{R}^d$, and a norm $||\cdot||$ to a real value is greater than zero.
 
-Above we used a norm to constrain the considered rejection regions and allow for a test based on the value of $\sqrt{n}\hat{\boldsymbol{\psi}}$ under the norm and the distribution of $\distv$ under the norm \textcolor{blue}{I don't understand the end of this sentence}.  However, this approach also works with more complicated functions.  Let $\Gamma_{\distv}(x)$ be a function that maps from a value and distribution in $\mathbb{R}^d$ to $\mathbb{R}$. \textcolor{blue}{I see $\Gamma_{\distv}$ being an $\mathbb{R}^d$ to $\mathbb{R}$ function. I don't see $\Gamma_Q(x)$ being a function? I also don't understand how this maps ``from a ... distribution'' to anywhere? Do you mean: ``For any distribution $Q$ with support contained in $\mathbb{R}^d$, let $\Gamma_Q$ be a function mapping from $\mathbb{R}^d$ to $\mathbb{R}$''?}  The distribution of $\Gamma_\distv(\rvv)$ \textcolor{blue}{(when $Z$ is sampled from what?)} can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. An example of $\Gamma_\distv$ is given below:
+Above we used a norm to constrain the considered rejection regions and allow for a test based on the value of $\sqrt{n}\hat{\boldsymbol{\psi}}$ under the norm the distribution of $\rvv$ under the norm, both of which reside in $\mathbb{R}$.
+Above, we have used a single norm to transform both the distribution of $\rvv$ and $\sqrt{n}\hat{\boldsymbol{\psi}}$ into $\mathbb{R}$ which allows for creating tests and calculating p-values similar to the univariate case. 
+% \textcolor{blue}{I don't understand the end of this sentence}.
+However, this approach also works with more complicated functions.  For every distribution $\distv$ with support conntained in $\mathbb{R}^d$, let $\Gamma_{\distv}$ be a function mapping from  $\mathbb{R}^d$ to $\mathbb{R}$.
+% \textcolor{blue}{I see $\Gamma_{\distv}$ being an $\mathbb{R}^d$ to $\mathbb{R}$ function. I don't see $\Gamma_Q(x)$ being a function? I also don't understand how this maps ``from a ... distribution'' to anywhere? Do you mean: ``For any distribution $Q$ with support contained in $\mathbb{R}^d$, let $\Gamma_Q$ be a function mapping from $\mathbb{R}^d$ to $\mathbb{R}$''?}
+The distribution of $\Gamma_\distv(\rvv)$ \textcolor{blue}{(when $Z$ is sampled from what?)} can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. An example of $\Gamma_\distv$ is given below:
 % any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$.  Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
 % In the previous example, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
 \begin{align*}
@@ -186,7 +191,8 @@ The above procedure requires knowledge of the limiting distribution of $\sqrt{n}
 \begin{align*}
 \hat{\psi}_j = \psi_j + \frac{1}{n}\sum_{i=1}^n D_j(\boldsymbol{x}_i) + o_p(1/\sqrt{n}) \text{ for some function } D_j
 \end{align*}
-When there is a fixed number of covariates, the Cramer-Wold device can be used to show that the vector of parameter estimates is asymptotically normal with mean zero, and variance covariance matrix given by $\Sigma = E_{\disto_0}\left[D(\rvo) D(\rvo)^\top \right]$: \textcolor{blue}{Note from Alex: do you mean $D(\rvo) D(\rvo)^\top$? This is what you would want if $D(\rvo)$ were a column vector, which would be more standard (similar comment in other places where `$\top$' is used)}
+When there is a fixed number of covariates, the Cramer-Wold device can be used to show that the vector of parameter estimates is asymptotically normal with mean zero, and variance covariance matrix given by $\Sigma = E_{\disto_0}\left[D(\rvo) D(\rvo)^\top \right]$:
+%  \textcolor{blue}{Note from Alex: do you mean $D(\rvo) D(\rvo)^\top$? This is what you would want if $D(\rvo)$ were a column vector, which would be more standard (similar comment in other places where `$\top$' is used)}
 
 \begin{align*}
     \sqrt{n}\left(\hat{\boldsymbol{\psi}} - \boldsymbol{\psi}\right) \xrightarrow{d} Z \sim N\left(0, \Sigma\right)
