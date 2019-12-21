@@ -144,7 +144,7 @@ can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-
 \begin{align*}
 	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv.
 \end{align*}
-\textcolor{blue}{What is $\rvv^* \overset{d}{=} \rvv$ telling us? Don't we already know that the probabilities over both of these quantities are indexed by $Q$? Also, why use different notation at all? Why not just $\rvv^*$ for both?}
+\textcolor{blue}{What is $\rvv^* \overset{d}{=} \rvv$ telling us? Don't we already know that the probabilities over both of these quantities are indexed by $Q$? Also, why use different notation at all? Why not just $\rvv^*$ for both? Here because $c_{0.8}$ is not random so this is distinction does not need to be made.}
 % In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||).$
 
 % This test statistic was then compared to the estimated limiting distribution of the test statistic under the null.  The key components of this test were to create a real valued summary of the observed test statistic, and compare this test statistic to draws of the test statistic under the null.  In the previous example, the test statistic was the quantile of the $\ell_2$ norm of our vector of parameter estimates.  We already know the distribution of this statistic is uniform from zero to one under the null, so calculating the p-value is trivial.
@@ -288,6 +288,7 @@ Show that the test will reject the null with a probability greater than $\alpha$
 \sh{Proof Outline: \\
 \begin{itemize}
 	\item Under local alternatives, $\sqrt{n}\hat{\boldsymbol{\psi}} \xrightarrow{d} N(\boldsymbol{c}, \Sigma)$
+    \item \textcolor{blue}{Think of Gamma as a funciton indexed by $\Sigma$ to allow it to be similar.  Also make some assumptions about how smooth $\Gamma$ is with respect to this parameters. For any given value of the input ($t$) think about }
 	\item The permutation test statistic will converge in distribution to a standard normal.  This paper should help: \citep{omelka_testing_2012}
 	\item For each norm selected, \citep{gupta_inequalitites_1972} states that the power will be non-decreasing as long as the rejection region is convex (This should be true most of our rejection regions), and the probability density is decreasing away from the mean (which is true of a normal distribution).  
 	\item Show that for $n$ large, the norm is selected to give the best power.  Thus since each norm obtains local power, the adaptive test will also obtain local power for $n$ large.
