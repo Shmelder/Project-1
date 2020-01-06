@@ -284,12 +284,13 @@ and the theorem's conclusion follows.
 \end{proof}
 
 \sh{\subsection{Unbiasedness at local alternatives}
+Consider a local alternative in which the true value of $\phi$ is shrinking towards zero at a root $n$ rate: $\phi = \underline{h}/\sqrt{n}$
 Show that the test will reject the null with a probability greater than $\alpha$ for an $\alpha$ level test }
 \sh{Proof Outline: \\
 \begin{itemize}
 	\item Under local alternatives, $\sqrt{n}\hat{\boldsymbol{\psi}} \xrightarrow{d} N(\boldsymbol{c}, \Sigma)$
     \item \textcolor{blue}{Think of Gamma as a funciton indexed by $\Sigma$ to allow it to be similar.  Also make some assumptions about how smooth $\Gamma$ is with respect to this parameters. For any given value of the input ($t$) think about }
-	\item The permutation test statistic will converge in distribution to a standard normal.  This paper should help: \citep{omelka_testing_2012}
+	\item \textcolor{blue}{Right now we have given up on proving things for the permutation test, but we may try to do it again at some point.} The permutation test statistic will converge in distribution to a standard normal.  This paper should help: \citep{omelka_testing_2012}
 	\item For each norm selected, \citep{gupta_inequalitites_1972} states that the power will be non-decreasing as long as the rejection region is convex (This should be true most of our rejection regions), and the probability density is decreasing away from the mean (which is true of a normal distribution).  
 	\item Show that for $n$ large, the norm is selected to give the best power.  Thus since each norm obtains local power, the adaptive test will also obtain local power for $n$ large.
 \end{itemize}} 
