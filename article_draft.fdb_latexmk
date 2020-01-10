@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex article_draft"] 1576880649 "article_draft.aux" "article_draft.bbl" "article_draft" 1576881504
+["bibtex article_draft"] 1578682397 "article_draft.aux" "article_draft.bbl" "article_draft" 1578682398
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "article_draft.aux" 1576880650 4802 4b5b047953b7cbb4f722a2b48b6acdeb "pdflatex"
-  "paper_bib.bib" 1564512598 30323 2c2c446a1147eedfcb6dcd36f002b837 ""
+  "article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 "pdflatex"
+  "paper_bib.bib" 1578589107 32463 b781b20bcb0280e1858a657c1876a6e9 ""
   (generated)
-  "article_draft.blg"
   "article_draft.bbl"
-["pdflatex"] 1576880649 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1576881504
-  "/Users/adamelder/Project-1/article_draft.aux" 1576880650 4802 4b5b047953b7cbb4f722a2b48b6acdeb ""
-  "/Users/adamelder/Project-1/article_draft.tex" 1576881499 37328 805e29b20424f849c40f453a104f5003 ""
-  "/dev/null" 1576881499 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "article_draft.blg"
+["pdflatex"] 1578682397 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1578682398
+  "/Users/adamelder/Project-1/article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 ""
+  "/Users/adamelder/Project-1/article_draft.tex" 1578682396 43762 1600ac7b0cbc54c2855bc62d90967011 ""
+  "/dev/null" 1578682385 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -48,6 +48,7 @@
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
@@ -189,13 +190,13 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "article_draft.aux" 1576880650 4802 4b5b047953b7cbb4f722a2b48b6acdeb "pdflatex"
-  "article_draft.bbl" 1576880649 5098 8a301304c10a8729c67c48a310ec3244 "bibtex article_draft"
-  "article_draft.tex" 1576881499 37328 805e29b20424f849c40f453a104f5003 ""
+  "article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 "pdflatex"
+  "article_draft.bbl" 1578682397 5443 4ff813d527acfc08136e1995af3e9cd7 "bibtex article_draft"
+  "article_draft.tex" 1578682396 43762 1600ac7b0cbc54c2855bc62d90967011 ""
   "figure_code/pwr_cmp.jpeg" 1558716785 132387 45827073c8d30fa880c482984ddc69e0 ""
   (generated)
   "article_draft.aux"
-  "article_draft.pdf"
   "/Users/adamelder/Project-1/article_draft.log"
   "article_draft.log"
+  "article_draft.pdf"
   "/Users/adamelder/Project-1/article_draft.pdf"
