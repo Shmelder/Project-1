@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex article_draft"] 1578682397 "article_draft.aux" "article_draft.bbl" "article_draft" 1578682398
+["bibtex article_draft"] 1579125137 "article_draft.aux" "article_draft.bbl" "article_draft" 1579125408
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 "pdflatex"
+  "article_draft.aux" 1579125138 5042 b280969d21667662d9675e4526553226 "pdflatex"
   "paper_bib.bib" 1578589107 32463 b781b20bcb0280e1858a657c1876a6e9 ""
   (generated)
   "article_draft.bbl"
   "article_draft.blg"
-["pdflatex"] 1578682397 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1578682398
-  "/Users/adamelder/Project-1/article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 ""
-  "/Users/adamelder/Project-1/article_draft.tex" 1578682396 43762 1600ac7b0cbc54c2855bc62d90967011 ""
-  "/dev/null" 1578682385 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1579125137 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1579125408
+  "/Users/adamelder/Project-1/article_draft.aux" 1579125138 5042 b280969d21667662d9675e4526553226 ""
+  "/Users/adamelder/Project-1/article_draft.tex" 1579125408 45438 a2ad18fdb17ec821657ad25705f9a7e7 ""
+  "/dev/null" 1579125403 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -190,13 +190,16 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1557342086 4259635 562fc36ec496993777a6c428d8bfb811 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "article_draft.aux" 1578682398 5013 05cf32c054e7a73929c2ffd212e042e9 "pdflatex"
-  "article_draft.bbl" 1578682397 5443 4ff813d527acfc08136e1995af3e9cd7 "bibtex article_draft"
-  "article_draft.tex" 1578682396 43762 1600ac7b0cbc54c2855bc62d90967011 ""
+  "article_draft.aux" 1579125138 5042 b280969d21667662d9675e4526553226 "pdflatex"
+  "article_draft.bbl" 1579125137 5443 4ff813d527acfc08136e1995af3e9cd7 "bibtex article_draft"
+  "article_draft.tex" 1579125408 45438 a2ad18fdb17ec821657ad25705f9a7e7 ""
   "figure_code/pwr_cmp.jpeg" 1558716785 132387 45827073c8d30fa880c482984ddc69e0 ""
+  "lots_cor.jpg" 1567791448 463440 ef2adf4673f45628e3845047ad653557 ""
+  "some_core.jpg" 1567791447 463569 0611080b93462ab057164dfdcdc7fabe ""
+  "uncor.jpg" 1567791447 463283 57698fc4195acc05fed7ca83696451da ""
   (generated)
-  "article_draft.aux"
-  "/Users/adamelder/Project-1/article_draft.log"
-  "article_draft.log"
-  "article_draft.pdf"
   "/Users/adamelder/Project-1/article_draft.pdf"
+  "/Users/adamelder/Project-1/article_draft.log"
+  "article_draft.pdf"
+  "article_draft.aux"
+  "article_draft.log"

@@ -143,9 +143,9 @@ The distribution of $\Gamma_\distv(\rvv)$ (where $\rvv \sim \distv$)
 can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. An example of $\Gamma_\distv$ is given below:
 % any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$.  Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
 % In the previous example, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
-\begin{align*}
-	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv^*|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv.
-\end{align*}
+\begin{align}
+	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{\distv, 0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv^*|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv. \label{gamma:pow}
+\end{align}
 % \textcolor{blue}{What is $\rvv^* \overset{d}{=} \rvv$ telling us? Don't we already know that the probabilities over both of these quantities are indexed by $Q$? Also, why use different notation at all? Why not just $\rvv^*$ for both? Here because $c_{0.8}$ is not random so this is distinction does not need to be made.}
 % In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||).$
 
@@ -168,7 +168,7 @@ To achieve this, first define $\Gamma_{1, \distv}(x), \dots, \Gamma_{p, \distv}(
 
 While this function is more complicated than before,  $\Gamma^*_{\distv}(\rvv))$ can still be compared to $\Gamma^*_{\distv}(\sqrt{n}\hat{\psi})$ to obtain a p-value. Also, while it may be difficult to obtain the exact distribution of $\Gamma_\distv^*(\rvv)$, the distribution is a function of $\distv$, so obtaining very good approximations of $\Gamma_\distv^*(\rvv)$ is possible by taking many draws from $\rvv$. This technique can be used both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\distv(\rvv)$ .
 
-% Let $g_1, \dots, g_k$ be a list candiate norms, and let $\boldsymbol{Z}_1, \dots, \boldsymbol{Z}_B$ and $\boldsymbol{V}_1, \dots, \boldsymbol{V}_B$ independent draws from $Q$.  For each of the possible norms, let a p-value be defined using the following quantity:
+% Let $g_1, \dots, g_k$ be a list candidate norms, and let $\boldsymbol{Z}_1, \dots, \boldsymbol{Z}_B$ and $\boldsymbol{V}_1, \dots, \boldsymbol{V}_B$ independent draws from $Q$.  For each of the possible norms, let a p-value be defined using the following quantity:
 
 % \begin{align*}
 % s_{p}\left(\sqrt{n}\hat{\boldsymbol{\psi}}, \boldsymbol{Z}_1, \dots, \boldsymbol{Z}_B\right) = \frac{1}{B}\sum_{i=1}^B I\left\{g_p\left(\sqrt{n}\hat{\boldsymbol{\psi}}\right)  \leq g_p(\boldsymbol{Z}_i)\right\}
@@ -212,6 +212,9 @@ While the above approach works asymptotically, there can be issues for small sam
 \section{Simulation Study}
 \label{sec:sim_stdy}
 \subsection{Correlation}
+\includegraphics[width = \linewidth]{uncor.jpg}
+\includegraphics[width = \linewidth]{some_core.jpg}
+\includegraphics[width = \linewidth]{lots_cor.jpg}
 % A wide variety of simulation settings are considered in this section to show the breath of settings in which the adaptive test can be used.  The first setting considers independent draws from a random vector with mean zero and variance-covariance matrix $\Sigma$.  The measure of association between $Y$ and each covariate will be $\text{Cov}(Y, W_{j})/\text{Var}(W_j)$.  The dimension of the vector, denoted $d$ takes values $10, 50$, and $200$.  The number of correlated covariates will be zero, one, or $0.1, 0.2$, or $0.6$ of all the correlated covariates.  The correlation between each of the covariates will be either $0$ or $0.5$.  The sample sizes considered are $100$ and $500$.   
 
 \sh{
@@ -294,13 +297,13 @@ Show that the test will reject the null with a probability greater than $\alpha$
 
 Under local alternatives described above, 
 \begin{align*}
-	Pr_{\disto}\left(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\distv})}(\alpha)\right) \geq \alpha
+	Pr_{\disto}\left(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha)\right) \geq \alpha,
 \end{align*}
-Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence against the null.  Values of $\Gamma$ can be thought of as similar to $p$-valuesx
+Where $\hat{\rvv} \sim \hat{\distv}$ and $\rvv \sim \distv$. Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence against the null.  Values of $\Gamma$ can be thought of as similar to $p$-values.
 
 \begin{lemma} \textcolor{red}{plus $h$?}
 	\begin{align*}
-	\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\distv}(\rvv) \text{ and } F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\distv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\distv}(\rvv) }(\alpha)
+	\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\distv}(\rvv + \underline{h}) \text{ and } F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\distv}(\rvv) }(\alpha)
 	\end{align*}
 \end{lemma}
 \textcolor{blue}{
@@ -312,6 +315,26 @@ Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence
 	However, I am not exactly sure how to argue that the first two terms cancel.  Initially I want to use the continuous mapping theorem.  Because the function itself changes with $n$ and is random, I am not sure what to do.  If we again use the continuity of $\Gamma$ could we argue that the values of the random functions will be close to the values of the non-random funcitons (where $\hat\distv$ is replaced by $\distv$)\\
 	My other idea was to assume that the function class of $\Gamma*$ is $P$-Donsker, but I think this may be overly complicated, and not necessary.
 }
+
+For fixed every $t$,  
+\begin{align*}
+\Gamma^*_{\hat{\distv}}(t) \rightarrow \Gamma^*_{\distv}(t)	\text{ if } \Gamma_{i, \hat{\distv}}(t) \rightarrow \Gamma^*_{i, \distv}(t) \text{ for every } i \in \{1, 2, \dots, d\}
+\end{align*}
+
+The function defined in \eqref{gamma:pow} satisfy this condition
+
+\begin{lemma}
+	Let $t$ be fixed.  By the consistency of our variance estimator, we know that $\hat{Z} \xrightarrow{d} Z$, and by continuous mapping theorem $||\hat{Z}|| \xrightarrow{d} ||Z||$.  Thus it can be shown that $C_{\hat{\distv}, 0.8} \rightarrow C_{\distv, 0.8}$ because the distribution functions for both $\hat{\rvv}$ and $\rvv$ are continuous.  
+
+	The above findings and Slutsky's theorem imply that $||\hat{Z} + \underline{t}|| - C_{\hat{\distv}, 0.8} \xrightarrow{d} ||Z - \underline{t}|| + C_{\distv, 0.8}$ so: 
+\begin{align*}
+	&\Gamma_{i, \hat{Q}}(t) = Pr_{\hat{\distv}}||\left(\hat{Z} + \underline{t}|| > C_{\hat{\distv}, 0.8}\right) = Pr_{\hat{\distv}}\left(||\hat{Z} + \underline{t}|| - C_{\hat{\distv}, 0.8} > 0\right) \rightarrow\\ 
+	& Pr_{\distv}\left(||Z + \underline{t}|| - C_{\distv, 0.8} > 0\right) = Pr_{\distv}\left(||Z + \underline{t}|| > C_{\distv, 0.8}\right) =\Gamma_{i, Q}(t) 
+\end{align*}
+% \begin{align*}
+% 	Pr(||\hat{\rvv}|| > c^-_{0.8}) \rightarrow Pr(||\rvv|| > c^-_{0.8}) < 0.8.
+% \end{align*}
+\end{lemma}
 
 A result of \citep{anderson_integral_1955} is that for two centrally symmetric, unimodal functions, $f_1(x)$ and  $f_2(x)$, the convolution,  
 \begin{align*}
