@@ -163,6 +163,7 @@ To achieve this, first define $\Gamma_{1, \distv}(x), \dots, \Gamma_{p, \distv}(
 \begin{align*}
 	\Gamma^*_\distv(x) = \max\left\{\Gamma_{1, \distv}(x), \Gamma_{2, \distv}(x), \dots, \Gamma_{p, \distv}(x)\right\}.
 \end{align*}
+\textcolor{blue}{Change * so that they are not suppersetting both the rv and functions}
 \textcolor{blue}{This could be the min if smaller values indicate larger distances away from the norm (such as p-values).}  
 
 While this function is more complicated than before,  $\Gamma^*_{\distv}(\rvv))$ can still be compared to $\Gamma^*_{\distv}(\sqrt{n}\hat{\psi})$ to obtain a p-value. Also, while it may be difficult to obtain the exact distribution of $\Gamma_\distv^*(\rvv)$, the distribution is a function of $\distv$, so obtaining very good approximations of $\Gamma_\distv^*(\rvv)$ is possible by taking many draws from $\rvv$. This technique can be used both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\distv(\rvv)$ .
@@ -286,7 +287,7 @@ and the theorem's conclusion follows.
 \end{proof}
 
 \sh{\subsection{Unbiasedness at local alternatives}
-Consider a local alternative in which the true value of $\psi$ is shrinking towards zero at a root $n$ rate: $\psi = \underline{h}/\sqrt{n}$.  For each potential norm, we assume the norm is convex.  This assumption can be relaxed to what was described by Eaton and Perlman (1991) (Concentration inequalitites for multivariate distributions: mv normal).  Under this local alternative, we will have $\sqrt{n} \hat{\psi} \xrightarrow{d} N(\underline{h}, \Sigma)$.    
+Consider a local alternative in which the true value of $\psi$ is shrinking towards zero at a root $n$ rate: $\psi = \underline{h}/\sqrt{n}$.  We assume that each potential norm is convex.  This assumption can be relaxed to what was described by Eaton and Perlman (1991) (Concentration inequalitites for multivariate distributions: mv normal).  Under this local alternative, we will have $\sqrt{n} \hat{\psi} \xrightarrow{d} N(\underline{h}, \Sigma)$.    
 Show that the test will reject the null with a probability greater than $\alpha$ for an $\alpha$ level test}
 
 \begin{theorem}
@@ -297,9 +298,9 @@ Under local alternatives described above,
 \end{align*}
 Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence against the null.  Values of $\Gamma$ can be thought of as similar to $p$-valuesx
 
-\begin{lemma}
+\begin{lemma} \textcolor{red}{plus $h$?}
 	\begin{align*}
-	\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\distv}(\distv) \text{ and } F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\distv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\distv}(\distv)}(\alpha)
+	\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\distv}(\rvv) \text{ and } F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\distv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\distv}(\rvv) }(\alpha)
 	\end{align*}
 \end{lemma}
 \textcolor{blue}{
@@ -318,11 +319,11 @@ A result of \citep{anderson_integral_1955} is that for two centrally symmetric, 
 \end{align*}
 is centrally symmetric and ray decreasing.  A function $f(x)$ on $\mathbb{R}^p$ is centrally symmetric if $f(-x) = f(x)$ for every $x$.  A function is unimodal if for every $k$, the set $\{x : f(x) \geq k\}$ is convex. A function $f(x)$ on $\mathbb{R}^p$ is ray decreasing if for every $x$ in $\mathbb{R}^p$, the function $g(\beta) = f(\beta x), \beta \in \mathbb{R}$ is a decreasing function of $\beta$.
 
-For now, we will assume that each of our $\Gamma_Q(x)$ is a unimodal, centrally symmetric function.  In certain cases, $\Gamma_Q(x)$ is increasing $x$ moves away from the origin. In these cases, for the purposes of this proof, instead use $\Gamma^{-1}_Q(x) = \left(\Gamma_Q(x)\right)^{-1}$.  
+For now, we will assume that each of our $\Gamma_Q$ is a unimodal, centrally symmetric function.  In certain cases, $\Gamma_Q$ is increasing $x$ moves away from the origin. In these cases, for the purposes of this proof, instead use $\Gamma^{-1}_Q(x) = \left(\Gamma_Q(x)\right)^{-1}$.  
 
 \begin{lemma}
 	\label{lemma:min_cent_sym_unm}
-	Let $\Gamma_1(x), \dots, \Gamma_d(x)$ all be centrally symmetric, unimodal functions.  Then $\Gamma^*(x) = \min\left\{\Gamma_1(x), \dots, \Gamma_d(x)\right\}$ is also centrally symmetric and unimodal.
+	Let $\Gamma_1, \dots, \Gamma_d$ all be centrally symmetric, unimodal functions.  Then $\Gamma^* = \min\left\{\Gamma_1, \dots, \Gamma_d\right\}$ is also centrally symmetric and unimodal.
 
 	Centrally symmetric:
 	\begin{align*}
