@@ -297,7 +297,7 @@ Show that the test will reject the null with a probability greater than $\alpha$
 
 Under local alternatives described above, 
 \begin{align*}
-	Pr_{\disto}\left(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha)\right) \geq \alpha,
+	Pr_{\disto}\left(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha)\right) > \alpha,
 \end{align*}
 Where $\hat{\rvv} \sim \hat{\distv}$ and $\rvv \sim \distv$. Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence against the null.  Values of $\Gamma$ can be thought of as similar to $p$-values.
 
@@ -318,7 +318,7 @@ Where $\hat{\rvv} \sim \hat{\distv}$ and $\rvv \sim \distv$. Here (unlike other 
 
 For fixed every $t$,  
 \begin{align*}
-\Gamma^*_{\hat{\distv}}(t) \rightarrow \Gamma^*_{\distv}(t)	\text{ if } \Gamma_{i, \hat{\distv}}(t) \rightarrow \Gamma^*_{i, \distv}(t) \text{ for every } i \in \{1, 2, \dots, d\}
+\Gamma^*_{\hat{\distv}}(t) \rightarrow \Gamma^*_{\distv}(t)	\text{ if } \Gamma_{i, \hat{\distv}}(t) \rightarrow \Gamma_{i, \distv}(t) \text{ for every } i \in \{1, 2, \dots, d\}
 \end{align*}
 
 The function defined in \eqref{gamma:pow} satisfy this condition
@@ -338,7 +338,7 @@ The function defined in \eqref{gamma:pow} satisfy this condition
 
 A result of \citep{anderson_integral_1955} is that for two centrally symmetric, unimodal functions, $f_1(x)$ and  $f_2(x)$, the convolution,  
 \begin{align*}
-	g(\theta) = \int f_1(\theta) f_2(x - \theta)
+	g(\theta) = \int f_1(x) f_2(x - \theta)
 \end{align*}
 is centrally symmetric and ray decreasing.  A function $f(x)$ on $\mathbb{R}^p$ is centrally symmetric if $f(-x) = f(x)$ for every $x$.  A function is unimodal if for every $k$, the set $\{x : f(x) \geq k\}$ is convex. A function $f(x)$ on $\mathbb{R}^p$ is ray decreasing if for every $x$ in $\mathbb{R}^p$, the function $g(\beta) = f(\beta x), \beta \in \mathbb{R}$ is a decreasing function of $\beta$.
 
@@ -379,7 +379,7 @@ For now, we will assume that each of our $\Gamma_Q$ is a unimodal, centrally sym
 A consequence of lemmas \ref{lemma:min_cent_sym_unm} and \ref{lemma:indct_cent_sym_unm}, the function $I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\}$ is centrally symmetric and unimodal.  
 
 \begin{align*}
-	\int I\left\{\Gamma^*_Q(x) \leq c_{0.95}\right\} \phi(x - \mu) dx &= \int \left(1 - I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\}\right)\phi(x - \mu) dx
+	\int I\left\{\Gamma^*_Q(x) < c_{0.95}\right\} \phi(x - \mu) dx &= \int \left(1 - I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\}\right)\phi(x - \mu) dx
 	\\
 	&= 1 - \int I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\} \phi(x - \mu) dx
 \end{align*}
