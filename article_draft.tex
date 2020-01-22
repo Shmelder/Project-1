@@ -15,6 +15,7 @@
 \newcommand{\bs}{\boldsymbol}
 \newcommand{\sh}{\textcolor{red}}
 \newcommand{\pr}{\text{Pr}}
+\newcommand{\vmat}{\Sigma}
 \newcommand{\indep}{\raisebox{0.05em}{\rotatebox[origin=c]{90}{$\models$}}}
 \usepackage[mathscr]{euscript}
 \usepackage{algorithm}
@@ -26,6 +27,9 @@
 \newcommand{\disto}{P}
 \newcommand{\rvv}{Z}
 \newcommand{\distv}{Q}
+\newcommand{\pf}{\Phi}
+\newcommand{\gi}{\Upsilon}
+
 
 \begin{document}
 \section{Introduction}
@@ -60,7 +64,7 @@ Last, let $\mathscr{M}$ denote the set of all possible distributions.  Define $\
 \subsection{Correlation Parameter}
 We will compare our method to both a simple bonferroni correction method, and the method described in \citep{zhang_comment_2015}.  The settings considered will be the same as the firs setting in \citep{mckeague_adaptive_2015}.  The parameter of interest, $\psi_j(P)$ will be the correlation between the outcome of interest and the $j$'th covariate. 
 
-The vector of covariates in this setting will be generated from a normal distribution with mean zero and a variance covariance of $\Sigma$ with $\Sigma_{ij}$ equal to $\rho$ when $i \neq j$ and equal to 1 when $i = j$, and .  Three different models are considered.  Three different models for the outcome of interest ($Y$) will be considered. Letting $\varepsilon \sim N(0, 1)$ and be independent of $X$, the first model let $Y = \varepsilon$, the second has $Y = X_1 / 4$, and third has $Y = \sum_{k = 1}^10 \beta_k X_k + \varepsilon$ where $\beta_k = 0.15$ for $k = \{1, \dots, 5\}$, and $\beta_k = -0.1$ for $k = \{6 \dots 10\}$.   in which Sample sizes of $100$ and $200$, dimensions of $10$, $50$, 100, 150, and 200, and $\rho$ of  $0, 0.5$, or $0.8$ will be considered,
+The vector of covariates in this setting will be generated from a normal distribution with mean zero and a variance covariance of $\Sigma$ with $\Sigma_{ij}$ equal to $\rho$ when $i \neq j$ and equal to 1 when $i = j$, and .  Three different models are considered.  Three different models for the outcome of interest ($Y$) will be considered. Letting $\varepsilon \sim N(0, 1)$ and be independent of $X$, the first model let $Y = \varepsilon$, the second has $Y = X_1 / 4$, and third has $Y = \sum_{k = 1}^{10} \beta_k X_k + \varepsilon$ where $\beta_k = 0.15$ for $k = \{1, \dots, 5\}$, and $\beta_k = -0.1$ for $k = \{6 \dots 10\}$.   in which Sample sizes of $100$ and $200$, dimensions of $10$, $50$, 100, 150, and 200, and $\rho$ of  $0, 0.5$, or $0.8$ will be considered,
 
 \subsection{Missing Data Example}
 In the second example, $Y$ is binary, $\Delta$ is a missingness indicator, and each $W_j$ is a covariate of interest.  When $\Delta = 0$ we don't observe $Y$.  The identifying assumption is $\Delta \indep Y | W$.  The parameter of interest is the risk ratio,
@@ -140,14 +144,14 @@ However, this approach also works with more complicated functions.  For every di
 % \textcolor{blue}{I see $\Gamma_{\distv}$ being an $\mathbb{R}^d$ to $\mathbb{R}$ function. I don't see $\Gamma_Q(x)$ being a function? I also don't understand how this maps ``from a ... distribution'' to anywhere? Do you mean: ``For any distribution $Q$ with support contained in $\mathbb{R}^d$, let $\Gamma_Q$ be a function mapping from $\mathbb{R}^d$ to $\mathbb{R}$''?}
 The distribution of $\Gamma_\distv(\rvv)$ (where $\rvv \sim \distv$)
 % \textcolor{blue}{(when $Z$ is sampled from what?)}
-can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. An example of $\Gamma_\distv$ is given below:
+can be compared to $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}})$ to obtain p-values and define a test. The $\distv$ used to define $\Gamma_\distv$ will always be an estimated limiting distribution and the estimators considered for this method are all asymptotically linear. Thus, $\distv$ will always be a centered multivariate normal distribution so we can index our functions through $\vmat$, the variance covariance matrix of $\distv$, instead of $\distv$ itself. An example of $\Gamma_\vmat$ is given below:
 % any test defined using an acceptance region can also be carried out using a function, say $\Gamma_\distv(x)$ that maps from a value and distribution in $\mathbb{R}^d$.  Trivially, this function could be defined as: $\Gamma_{\distv(\disto)}(x) = I\{x \in \Theta_0(\disto)\}$.  However, in other cases, (for example the $\ell_2$ ball), this function can be more intuitive and can change depending on the norm.  
 % In the previous example, $\Gamma_\distv(x) = Pr_\distv\left(||\rvv|| \geq ||x|| \right)$.  For this definition of $\Gamma$, we knew the distribution of $\Gamma_\distv(\rvv)$ is uniformly distributed on $(0, 1)$.  However, for other $\Gamma$, this may not be the case. Consider 
 \begin{align}
-	\Gamma_\distv(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{\distv, 0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv^*|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv. \label{gamma:pow}
+	\Gamma_\vmat(x) &= Pr_\distv(||\rvv^* + x|| > c_{0.8})  \text{ where }  c_{\vmat, 0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv^*|| < c) \geq 0.8 \} \text{ and } \rvv^* \overset{d}{=} \rvv. \label{gamma:pow}
 \end{align}
 % \textcolor{blue}{What is $\rvv^* \overset{d}{=} \rvv$ telling us? Don't we already know that the probabilities over both of these quantities are indexed by $Q$? Also, why use different notation at all? Why not just $\rvv^*$ for both? Here because $c_{0.8}$ is not random so this is distinction does not need to be made.}
-% In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\distv(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\distv(\rvv, ||\cdot||).$
+% In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\vmat(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\vmat(\rvv, ||\cdot||).$
 
 % This test statistic was then compared to the estimated limiting distribution of the test statistic under the null.  The key components of this test were to create a real valued summary of the observed test statistic, and compare this test statistic to draws of the test statistic under the null.  In the previous example, the test statistic was the quantile of the $\ell_2$ norm of our vector of parameter estimates.  We already know the distribution of this statistic is uniform from zero to one under the null, so calculating the p-value is trivial.
 
@@ -158,15 +162,15 @@ While this method for defining tests allows for many different specifications, i
 \subsection{Adaptive selection of a norm}
 In the previous section it was shown that a test can be defined by choosing a summarizing function and norm. However, the choice of norm influences the power of the test. In most scenarios it will not be clear a priori which norm will have maximal power for the true alternative. The procedure proposed in this section adaptively selects a norm and it will be shown that this procedure achieves greater power than a test with a fixed norm, while maintaining type 1 error control.  
 
-To achieve this, first define $\Gamma_{1, \distv}(x), \dots, \Gamma_{p, \distv}(x)$ as collection of functions in which the functions only differ by the norm used in their definition. Next, define
-% by defining a $\Gamma$ to those defined earlier, except the optimal norm is selected, and the corresponding summary value of $\Gamma$ with the optimal norm is returned.  For example, if we had $p$ different norms, $\norm_1, \dots, \norm_p$ and some summary function $\Gamma_\distv(x, ||\cdot||)$, we would define the adaptive version of $\Gamma$ as
+To achieve this, first define $\Gamma_{1, \vmat}(x), \dots, \Gamma_{p, \vmat}(x)$ as collection of functions in which the functions only differ by the norm used in their definition. Next, define
+% by defining a $\Gamma$ to those defined earlier, except the optimal norm is selected, and the corresponding summary value of $\Gamma$ with the optimal norm is returned.  For example, if we had $p$ different norms, $\norm_1, \dots, \norm_p$ and some summary function $\Gamma_\vmat(x, ||\cdot||)$, we would define the adaptive version of $\Gamma$ as
 \begin{align*}
-	\Gamma^*_\distv(x) = \max\left\{\Gamma_{1, \distv}(x), \Gamma_{2, \distv}(x), \dots, \Gamma_{p, \distv}(x)\right\}.
+	\Gamma^*_\vmat(x) = \max\left\{\Gamma_{1, \vmat}(x), \Gamma_{2, \vmat}(x), \dots, \Gamma_{p, \vmat}(x)\right\}.
 \end{align*}
 \textcolor{blue}{Change * so that they are not suppersetting both the rv and functions}
 \textcolor{blue}{This could be the min if smaller values indicate larger distances away from the norm (such as p-values).}  
 
-While this function is more complicated than before,  $\Gamma^*_{\distv}(\rvv))$ can still be compared to $\Gamma^*_{\distv}(\sqrt{n}\hat{\psi})$ to obtain a p-value. Also, while it may be difficult to obtain the exact distribution of $\Gamma_\distv^*(\rvv)$, the distribution is a function of $\distv$, so obtaining very good approximations of $\Gamma_\distv^*(\rvv)$ is possible by taking many draws from $\rvv$. This technique can be used both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\distv(\rvv)$ .
+While this function is more complicated than before,  $\Gamma^*_{\vmat}(\rvv))$ can still be compared to $\Gamma^*_{\vmat}(\sqrt{n}\hat{\psi})$ to obtain a p-value. Also, while it may be difficult to obtain the exact distribution of $\Gamma_\vmat^*(\rvv)$, the distribution is a function of $\distv$, so obtaining very good approximations of $\Gamma_\vmat^*(\rvv)$ is possible by taking many draws from $\rvv$. This technique can be used both to estimate the function $\Gamma$ and to estimate $\Gamma^*_\vmat(\rvv)$ .
 
 % Let $g_1, \dots, g_k$ be a list candidate norms, and let $\boldsymbol{Z}_1, \dots, \boldsymbol{Z}_B$ and $\boldsymbol{V}_1, \dots, \boldsymbol{V}_B$ independent draws from $Q$.  For each of the possible norms, let a p-value be defined using the following quantity:
 
@@ -202,7 +206,7 @@ When there is a fixed number of covariates, the Cramer-Wold device can be used t
 \begin{align*}
     \sqrt{n}\left(\hat{\boldsymbol{\psi}} - \boldsymbol{\psi}\right) \xrightarrow{d} Z \sim N\left(0, \Sigma\right)
 \end{align*}
-Under $H_0$, $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges to $Z$, and $\Sigma$ can be approximates with $\widehat{\Sigma} = \frac{1}{n}\sum_{i = 1}^n D(\boldsymbol{x}_i) D(\boldsymbol{x}_i)^\top$.  Thus, in practice we will use an estimate of $\distv$, $\hat{\distv}$ which is distributed $N(0, \widehat{\Sigma})$ in place of $\distv$, and the random variable $\hat{\rvv}$ with distribution $\hat{\distv}$ in place of $\rvv$.  Thus, the test statistic will be $\Gamma_{\hat{\distv}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ and will be compared to $\Gamma_{\hat{\distv}}(\hat{\rvv})$.
+Under $H_0$, $\sqrt{n}\hat{\boldsymbol{\psi}}$ converges to $Z$, and $\Sigma$ can be approximated with $\widehat{\Sigma} = \frac{1}{n}\sum_{i = 1}^n D(\boldsymbol{x}_i) D(\boldsymbol{x}_i)^\top$.  In practice, a consistent estimator of $\vmat$, $\hat{\vmat}$ will be used in place of $\vmat$. Similarly, the random variable $\hat{\rvv}$ with distribution $\hat{\distv}$ will be used in place of $\rvv$.  Thus, the test statistic will be $\Gamma_{\hat{\vmat}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ and will be compared to $\Gamma_{\hat{\vmat}}(\hat{\rvv})$.
 
 \subsection{Using a permutation test for the test statistic}
 While the above approach works asymptotically, there can be issues for small sample sizes.  To avoid inflated type one error, a permutation based test can be used.  Here, $\hat{\distv}^\#$ is used to define $\Gamma$, and the test will compare $\Gamma_{\hat{\distv}}(\sqrt{n} \hat{\boldsymbol{\psi}})$ to $\Gamma_{\hat{\distv}}(\rvv^\#)$. To determine $\hat{\distv}^\#$, the $Y$'s from the observed data are permuted before calculating $\widehat \Sigma$.  Draws from $\rvv^\#$ are taken by permuting all of the $Y$'s of the observed data.  \textcolor{blue}{There are a few more complications here that need to be figured out.}
@@ -297,44 +301,87 @@ Show that the test will reject the null with a probability greater than $\alpha$
 
 Under local alternatives described above, 
 \begin{align*}
-	Pr_{\disto}\left(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha)\right) > \alpha,
+	Pr_{\disto}\left(\Gamma^*_{\hat{\vmat}}(\sqrt{n}\hat{\boldsymbol{\psi}}) \leq F^{-1}_{\Gamma^*_{\hat{\vmat}}(\hat{\rvv})}(\alpha)\right) > \alpha,
 \end{align*}
+ 
 Where $\hat{\rvv} \sim \hat{\distv}$ and $\rvv \sim \distv$. Here (unlike other parts of the paper) small values of $\Gamma$ provide evidence against the null.  Values of $\Gamma$ can be thought of as similar to $p$-values.
-
-\begin{lemma} \textcolor{red}{plus $h$?}
-	\begin{align*}
-	\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\distv}(\rvv + \underline{h}) \text{ and } F^{-1}_{\Gamma^*_{\hat{\distv}}(\hat{\rvv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\distv}(\rvv) }(\alpha)
-	\end{align*}
-\end{lemma}
-\textcolor{blue}{
-	The proofs of these will be similar, but I am not sure quite how to do it.  While the following expansion is useful for me, I am not sure how to deal with each part:
-	\begin{align*}
-		Pr_{\disto}(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) > t) - Pr_{\disto}(\Gamma^*_{\distv}(\distv) > t) & = Pr_{\disto}(\Gamma^*_{\hat{\distv}}(\sqrt{n}\hat{\boldsymbol{\psi}}) > t) - Pr_{\disto}(\Gamma^*_{\hat{\distv}}(\distv) > t) - \left( Pr_{\disto}(\Gamma^*_{\distv}(\distv) > t) - Pr_{\disto}(\Gamma^*_{\hat{\distv}}(\distv) > t) \right)	
-	\end{align*}
-	We can make arguments that the second two terms will cancel because of an assumed continuity of our function $\Gamma^*$ with respect to $Q$.  We can also think of $\Gamma^*$ as being indexed by $Q$'s covariance matrix instead of its entire distribution to make more simple continuity arguments.\\
-	However, I am not exactly sure how to argue that the first two terms cancel.  Initially I want to use the continuous mapping theorem.  Because the function itself changes with $n$ and is random, I am not sure what to do.  If we again use the continuity of $\Gamma$ could we argue that the values of the random functions will be close to the values of the non-random funcitons (where $\hat\distv$ is replaced by $\distv$)\\
-	My other idea was to assume that the function class of $\Gamma*$ is $P$-Donsker, but I think this may be overly complicated, and not necessary.
-}
-
-For fixed every $t$,  
-\begin{align*}
-\Gamma^*_{\hat{\distv}}(t) \rightarrow \Gamma^*_{\distv}(t)	\text{ if } \Gamma_{i, \hat{\distv}}(t) \rightarrow \Gamma_{i, \distv}(t) \text{ for every } i \in \{1, 2, \dots, d\}
-\end{align*}
-
-The function defined in \eqref{gamma:pow} satisfy this condition
+\end{theorem}
 
 \begin{lemma}
-	Let $t$ be fixed.  By the consistency of our variance estimator, we know that $\hat{Z} \xrightarrow{d} Z$, and by continuous mapping theorem $||\hat{Z}|| \xrightarrow{d} ||Z||$.  Thus it can be shown that $C_{\hat{\distv}, 0.8} \rightarrow C_{\distv, 0.8}$ because the distribution functions for both $\hat{\rvv}$ and $\rvv$ are continuous.  
-
-	The above findings and Slutsky's theorem imply that $||\hat{Z} + \underline{t}|| - C_{\hat{\distv}, 0.8} \xrightarrow{d} ||Z - \underline{t}|| + C_{\distv, 0.8}$ so: 
-\begin{align*}
-	&\Gamma_{i, \hat{Q}}(t) = Pr_{\hat{\distv}}||\left(\hat{Z} + \underline{t}|| > C_{\hat{\distv}, 0.8}\right) = Pr_{\hat{\distv}}\left(||\hat{Z} + \underline{t}|| - C_{\hat{\distv}, 0.8} > 0\right) \rightarrow\\ 
-	& Pr_{\distv}\left(||Z + \underline{t}|| - C_{\distv, 0.8} > 0\right) = Pr_{\distv}\left(||Z + \underline{t}|| > C_{\distv, 0.8}\right) =\Gamma_{i, Q}(t) 
-\end{align*}
-% \begin{align*}
-% 	Pr(||\hat{\rvv}|| > c^-_{0.8}) \rightarrow Pr(||\rvv|| > c^-_{0.8}) < 0.8.
-% \end{align*}
+	\label{lemma:cont_of_gam}
+	The function:
+	\begin{align*}
+		\Gamma_{\Sigma}(t) = Pr_\distv(||\rvv^* + t|| > c_{0.8})  \text{ where }  c_{\vmat, 0.8} \equiv \min_{c}\{c : Pr_\distv(||\rvv^*|| < c) \geq 0.8 \} \text{ and } \rvv^* \sim N(0, \Sigma)
+	\end{align*}
+	is continuous with respect to $\Sigma$ and $t$.  
 \end{lemma}
+
+This lemma will follow because $\Gamma$ is the integral of a composition of bounded, continuous functions.   
+
+\begin{proof}
+	The multivariate normal probability density function
+\begin{align*}
+	\phi(x, \mu, \Sigma) = \left(2\pi\right)^{-k} \text{det}\left({\Sigma}\right)^{- \frac{1}{2}} \exp\left(-\frac{1}{2} (x - \mu)^\top \Sigma^{-1}(x - \mu)\right) 
+\end{align*}	
+is continuous with respect to both $\Sigma$ and $t$.
+
+Since the exponential function, determinate, matrix inverses, and linear operators are all differentiable, they are also all continuous.  Because the multivariate normal pdf is the composition of continuous functions, it is also continuous.
+
+It follows that if $\mu_n \rightarrow \mu$, and $\Sigma_n \rightarrow \Sigma$, then for each $x$, $\psi(x, \mu_n, \Sigma_n) \rightarrow \psi(x, \mu, \Sigma)$.
+This result and the dominated convergence theorem imply the corresponding CDF's are also continuous ($\phi(x, \hat{\mu}, \hat{\Sigma}) + \phi(x, \mu, \Sigma)$ can be used as the dominating measure):
+
+\begin{align*}
+	\pf_{\hat{\Sigma}, \hat{\mu}}\left(t \right) = \int_{||x|| < t} \phi(x, \hat{\mu}, \hat{\Sigma})dx \rightarrow \int_{||x|| < t} \phi(x, \mu, \Sigma)dx = \Phi_{\Sigma, \mu}(t).
+\end{align*}
+
+Because the normal cdf is continuous, we know the normal quantile function will be continuous as well. Also, because $\Phi_{\Sigma, \mu}(t)$ has a bounded derivative, it is uniformly continuous.  These findings imply the following:
+
+\begin{align*}
+	\Gamma_{\hat{\Sigma}}(x) - \Gamma_{\Sigma}(x) &= Pr_{\hat{\distv}}(||\rvv^* + x|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) - Pr_{\distv}(||\rvv^* + x|| > \Phi^{-1}_{\Sigma, 0}(0.8))\\
+	&\leq \int_{\mathbb{R}^d} |\phi(t, x, \hat{\Sigma}) I\{||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \} - \phi(t, x, \Sigma) I\{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8) \}|dt \\ 
+	& = \int_{||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8), \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
+	& \hspace{5em} \int_{\Phi^{-1}_{\Sigma, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)} |\phi(t, x, \hat{\Sigma})|dt + \int_{\Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} | \phi(t, x, \Sigma)|dt \\
+	& \leq \int_{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
+	& \hspace{5em} \int_{\Phi^{-1}_{\Sigma, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)} \phi(t, x, \hat{\Sigma})dt + \int_{\Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} \phi(t, x, \Sigma)dt \\
+	& = \int_{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
+	& \hspace{5em} \Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) + \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) \\
+	& = \int_{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
+	& \hspace{5em} \Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) - \left(\Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right)+\\
+	& \hspace{5em} \left(\Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right) +  \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) \\
+	& = \int_{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
+	& \hspace{5em} \left(\Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) \right) - \left(\Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) -  \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right)+\\
+	& \hspace{5em} \left(\Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right) +  \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) \\
+\end{align*}
+
+Taking the limit as $n \to \infty$ of the quantity above, we find that the first term is zero by dominated convergence theorem.  The other four terms are also zero because of the uniform continuity of $\Phi_{\Sigma, x}$ and continuity of $\Phi^{-1}_{\Sigma, x}$
+\end{proof}
+
+\begin{lemma}
+Under local alternatives, 
+	\begin{align*}
+		\Gamma^*_{\hat{\Sigma}}(\sqrt{n} \hat{\boldsymbol{\psi}}) \xrightarrow{d} \Gamma^*_{\Sigma}(Z + \underline{h}) 
+	\end{align*}
+\end{lemma}
+
+\begin{proof}
+	It was shown in Lemma \ref{lemma:cont_of_gam} that for each norm $||\cdot||$, $\Gamma_{\Sigma}(x)$ is continuous with respect to $\Sigma$ and $x$.  This finding, the continuity of the max function, and because a composition of continuous functions is also continuous it follows that
+
+	\begin{align*}
+		\Gamma^*_{\Sigma} \equiv \max\left\{\Gamma_{1, \Sigma}, \dots, \Gamma_{d, \Sigma}\right\}
+	\end{align*}
+	is also continuos with respect to $\Sigma$ and $x$. Under local alternatives, $\sqrt{n} \hat{\boldsymbol{\psi}} \xrightarrow{d} Z + \underline{h}$ and $\hat{\Sigma} \xrightarrow{p} \Sigma$.   It follows from the continuous mapping theorem that $\Gamma^*_{\hat{\Sigma}}(\sqrt{n} \hat{\boldsymbol{\psi}}) \xrightarrow{d} \Gamma^*_{\Sigma}(Z + \underline{h}) $
+\end{proof}
+
+It has now been establish that under local alternatives the distribution of our estimate converges to $\Gamma^*_{\Sigma}(Z + \underline{h})$.  Denote the CDF of $\Gamma^*_{\Sigma}(Z + t)$ this distribution by $F_{\Sigma, t}$ and the corresponding quantile function of the distribution by $F^{-1}_{\Sigma, t}$.  
+
+To prove unbiasedness at local alternatives, we show 
+\begin{align*}
+	F_{\Sigma, t}(F^{-1}_{\Sigma, 0}(1 - \alpha)) \geq F_{\Sigma, 0}(F^{-1}_{\Sigma, 0}(1 - \alpha)) = \alpha
+\end{align*}
+using results from the \citep{anderson_integral_1955} manuscript.
+% \textcolor{blue}{What is $\rvv^* \overset{d}{=} \rvv$ telling us? Don't we already know that the probabilities over both of these quantities are indexed by $Q$? Also, why use different notation at all? Why not just $\rvv^*$ for both? Here because $c_{0.8}$ is not random so this is distinction does not need to be made.}
+% In this scenario, the test can be carried out by comparing our test statistic, $\Gamma_\vmat(\sqrt{n}\hat{\boldsymbol{\psi}}, ||\cdot||)$ to $\Gamma_\vmat(\rvv, ||\cdot||).$
+
 
 A result of \citep{anderson_integral_1955} is that for two centrally symmetric, unimodal functions, $f_1(x)$ and  $f_2(x)$, the convolution,  
 \begin{align*}
@@ -342,62 +389,69 @@ A result of \citep{anderson_integral_1955} is that for two centrally symmetric, 
 \end{align*}
 is centrally symmetric and ray decreasing.  A function $f(x)$ on $\mathbb{R}^p$ is centrally symmetric if $f(-x) = f(x)$ for every $x$.  A function is unimodal if for every $k$, the set $\{x : f(x) \geq k\}$ is convex. A function $f(x)$ on $\mathbb{R}^p$ is ray decreasing if for every $x$ in $\mathbb{R}^p$, the function $g(\beta) = f(\beta x), \beta \in \mathbb{R}$ is a decreasing function of $\beta$.
 
-For now, we will assume that each of our $\Gamma_Q$ is a unimodal, centrally symmetric function.  In certain cases, $\Gamma_Q$ is increasing $x$ moves away from the origin. In these cases, for the purposes of this proof, instead use $\Gamma^{-1}_Q(x) = \left(\Gamma_Q(x)\right)^{-1}$.  
+For now, we will assume that.  We assume that our tests will always be define our tests in such a way that we reject the null when $\Gamma^*_{\hat{\vmat}}(\sqrt{n} \hat{\boldsymbol{\psi}}) > c$ for some $c$. It is expected that $\Gamma^*_{\vmat}(x)$  increases as $x$ moves away from the origin. For the purposes of this proof it will be useful to define new functions 
+
+\begin{align*}
+	\gi_{i, \Sigma} \equiv \left(\gi_{i, \Sigma}\right)^{-1} \text{ and } \gi_{\Sigma}^* = \min\left\{\gi_{1, \Sigma}, \dots, \gi_{d, \Sigma}\right\}
+\end{align*} 
+
+that decrease as $x$ moves away from the origin.   
 
 \begin{lemma}
 	\label{lemma:min_cent_sym_unm}
-	Let $\Gamma_1, \dots, \Gamma_d$ all be centrally symmetric, unimodal functions.  Then $\Gamma^* = \min\left\{\Gamma_1, \dots, \Gamma_d\right\}$ is also centrally symmetric and unimodal.
-
-	Centrally symmetric:
-	\begin{align*}
-	\Gamma^*(x) = \min\left\{\Gamma_1(x), \dots, \Gamma_d(x)\right\} = \min\left\{\Gamma_1(-x), \dots, \Gamma_d(-x)\right\} = \Gamma^*(-x)
-	\end{align*}
-
-	Unimodal:
-	\begin{align*}
-		\left\{x : \Gamma^*(x) \geq k\right\} = \left\{x : \Gamma_1(x) \geq k, \dots, \Gamma_d(x) \geq k\right\} = \bigcap_{i = 1}^d \left\{x : \Gamma_i(x) \geq k \right\}
-	\end{align*}
-	The intersection of multiple convex sets is also convex, so $\Gamma^*(x)$ is unimodal.
+	Let $\gi_1, \dots, \gi_d$ all be centrally symmetric, unimodal functions.  Then $\gi^* = \min\left\{\gi_1, \dots, \gi_d\right\}$ is also centrally symmetric and unimodal.
 \end{lemma}
+\begin{proof}
+Because each $\gi_i$ is a centrally symmetric and $\gi^*$ is a function of $x$ only through the $\gi_i$'s, $\gi^*$ is also centrally symmetric:
+	\begin{align*}
+	\gi^*(x) = \min\left\{\gi_1(x), \dots, \gi_d(x)\right\} = \min\left\{\gi_1(-x), \dots, \gi_d(-x)\right\} = \gi^*(-x)
+	\end{align*}
+The set $M^* \equiv \{x : \gi^*(x) \geq k\}$ contains all of the $x$ for which $\gi_i(x) \geq k$ for all $i \in \{1, \dots, d\}$.  Thus $M^*$ is the intersection of all sets $M_i \equiv \{x : \gi_i(x) \geq k\}$.  Each $M_i$ is convex because each $\gi_i$ is unimodal, and the intersection of a countable number of convex sets is convex.  Thus $M^*$ is convex and $\gi^*$ is unimodal.
+	% \begin{align*}
+	% 	\left\{x : \gi^*(x) \geq k\right\} = \left\{x : \gi_1(x) \geq k, \dots, \gi_d(x) \geq k\right\} = \bigcap_{i = 1}^d \left\{x : \gi_i(x) \geq k \right\}
+	% \end{align*}
+\end{proof}
 
 \begin{lemma}
 	\label{lemma:indct_cent_sym_unm}
 	Let $f(x)$ be a centrally symmetric, unimodal function.  Then $g(x) = I\left\{f(x) \geq c\right\}$ where $c \in \mathbb{R}$ is also centrally symmetric and unimodal. 
-
-	Centrally symmetric:
+\end{lemma}
+\begin{proof}
+Because $f$ is centrally symmetric and $g$ is a function of $x$ only through $g$, $g$ is also centrally symmetric:
 	\begin{align*}
 	g(x) = I\left\{f(x) \geq c\right\} = I\left\{f(-x) \geq c\right\} = g(-x)
 	\end{align*}
 
-	Unimodal:
-	If $k < 0$ or $k > 1$, then $\left\{x : g(x) \geq k\right\}$ will be the empty set or all of $\mathbb{R}^d$ respectively, and both sets are convex.  Otherwise, 
-	\begin{align*}
-		\left\{x : g(x) \geq k\right\} = \left\{x : I\left\{f(x) \geq c\right\} \geq k\right\} = \left\{x : f(x) \geq c\right\}
-	\end{align*}
-	which is convex by definition.
-\end{lemma}
-A consequence of lemmas \ref{lemma:min_cent_sym_unm} and \ref{lemma:indct_cent_sym_unm}, the function $I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\}$ is centrally symmetric and unimodal.  
+	If $k < 0$ or $k > 1$, then $\left\{x : g(x) \geq k\right\}$ will be the empty set or all of $\mathbb{R}^d$ respectively, and both sets are convex.  
+	
+	Otherwise, the set $\left\{x : g(x) \geq k\right\} = \left\{x : I\left\{f(x) \geq c\right\} \geq k\right\}$. The indicator function will be greater than or equal to $k$ whenever $f(x) \geq c$, so $\left\{x : g(x) \geq k\right\} =\left\{x : f(x) \geq c\right\}$
+	which is convex because $f$ is unimodal.
+
+	Thus $g$ is unimodal.
+\end{proof}
+
+Because each $\gi_{\Sigma, i}$ is unimodal and centrally symmetric, lemma \ref{lemma:min_cent_sym_unm} implies $\gi^*_{\Sigma, i}$ is also unimodal and centrally symmetric. It follows from lemma \ref{lemma:indct_cent_sym_unm} and the previous finding that $I\left\{\gi^*_Q(x) \geq c_{0.95}\right\}$ is centrally symmetric and unimodal.  
 
 \begin{align*}
-	\int I\left\{\Gamma^*_Q(x) < c_{0.95}\right\} \phi(x - \mu) dx &= \int \left(1 - I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\}\right)\phi(x - \mu) dx
+	\int I\left\{\Gamma^*_Q(x) > c_{0.95}\right\} \phi(x - \mu) dx &= \int I\left\{\gi^*_Q(x) < c_{0.95}^{-1}\right\} \phi(x - \mu) dx\\
+	& = \int \left(1 - I\left\{\gi^*_Q(x) \geq c^{-1}_{0.95}\right\}\right)\phi(x - \mu) dx
 	\\
-	&= 1 - \int I\left\{\Gamma^*_Q(x) \geq c_{0.95}\right\} \phi(x - \mu) dx
+	&= 1 - \int I\left\{\gi^*_Q(x) \geq c^{-1}_{0.95}\right\} \phi(x - \mu) dx
 \end{align*}
 Since the subtracted quantity is decreasing by \citep{anderson_integral_1955}, the quantity as a whole will be increasing.  Thus local power is obtained.
 
-\end{theorem}
 
 \sh{Proof Outline: \\
 \begin{itemize}
 	\item Under local alternatives, $\sqrt{n}\hat{\boldsymbol{\psi}} \xrightarrow{d} N(\boldsymbol{c}, \Sigma)$
 	\item With a large enough sample size, and enough MC draws, we have that for each norm: 
-    \item \textcolor{blue}{Think of Gamma as a funciton indexed by $\Sigma$ to allow it to be similar.  Also make some assumptions about how smooth $\Gamma$ is with respect to this parameters. For any given value of the input ($t$) think about }
+    \item \textcolor{blue}{Think of Gamma as a funciton indexed by $\Sigma$ to allow it to be similar.  Also make some assumptions about how smooth $\gi$ is with respect to this parameters. For any given value of the input ($t$) think about }
 	\item \textcolor{blue}{Right now we have given up on proving things for the permutation test, but we may try to do it again at some point.} The permutation test statistic will converge in distribution to a standard normal.  This paper should help: \citep{omelka_testing_2012}
 	\item For each norm selected, \citep{gupta_inequalitites_1972} states that the power will be non-decreasing as long as the rejection region is convex (This should be true most of our rejection regions), and the probability density is decreasing away from the mean (which is true of a normal distribution).  
 	\item Show that for $n$ large, the norm is selected to give the best power.  Thus since each norm obtains local power, the adaptive test will also obtain local power for $n$ large.
 \end{itemize}} 
 \begin{align*}
-	\mathcal{L}\left(\Gamma_{\hat{\distv}}\left(\sqrt{n} \hat{\boldsymbol{\Psi}}(\boldsymbol{X})\right), \Gamma_{\distv}\left(\sqrt{n} \hat{\boldsymbol{\Psi}}(\boldsymbol{X})\right)\right) \rightarrow 0
+	\mathcal{L}\left(\Gamma_{\hat{\vmat}}\left(\sqrt{n} \hat{\boldsymbol{\Psi}}(\boldsymbol{X})\right), \Gamma_{\vmat}\left(\sqrt{n} \hat{\boldsymbol{\Psi}}(\boldsymbol{X})\right)\right) \rightarrow 0
 \end{align*}
 
 \sh{\subsection{Consistency of norm selection} 
@@ -424,3 +478,39 @@ Under the null, $Y \indep \rvo$.  Thus the test statistic will be taken from the
 \bibliography{paper_bib}
 
 \end{document}
+
+
+% \begin{lemma} \textcolor{red}{plus $h$?}
+% 	\begin{align*}
+% 	\Gamma^*_{\hat{\vmat}}(\sqrt{n}\hat{\boldsymbol{\psi}})	\xrightarrow{d}\Gamma^*_{\vmat}(\rvv + \underline{h}) \text{ and } F^{-1}_{\Gamma^*_{\hat{\vmat}}(\hat{\rvv})}(\alpha) \rightarrow  F^{-1}_{\Gamma^*_{\vmat}(\rvv) }(\alpha)
+% 	\end{align*}
+% \end{lemma}
+% \textcolor{blue}{
+% 	The proofs of these will be similar, but I am not sure quite how to do it.  While the following expansion is useful for me, I am not sure how to deal with each part:
+% 	\begin{align*}
+% 		Pr_{\disto}(\Gamma^*_{\hat{\vmat}}(\sqrt{n}\hat{\boldsymbol{\psi}}) > t) - Pr_{\disto}(\Gamma^*_{\vmat}(\vmat) > t) & = Pr_{\disto}(\Gamma^*_{\hat{\vmat}}(\sqrt{n}\hat{\boldsymbol{\psi}}) > t) - Pr_{\disto}(\Gamma^*_{\hat{\vmat}}(\vmat) > t) - \left( Pr_{\disto}(\Gamma^*_{\vmat}(\vmat) > t) - Pr_{\disto}(\Gamma^*_{\hat{\vmat}}(\vmat) > t) \right)	
+% 	\end{align*}
+% 	We can make arguments that the second two terms will cancel because of an assumed continuity of our function $\Gamma^*$ with respect to $Q$.  We can also think of $\Gamma^*$ as being indexed by $Q$'s covariance matrix instead of its entire distribution to make more simple continuity arguments.\\
+% 	However, I am not exactly sure how to argue that the first two terms cancel.  Initially I want to use the continuous mapping theorem.  Because the function itself changes with $n$ and is random, I am not sure what to do.  If we again use the continuity of $\Gamma$ could we argue that the values of the random functions will be close to the values of the non-random funcitons (where $\hat\distv$ is replaced by $\distv$)\\
+% 	My other idea was to assume that the function class of $\Gamma*$ is $P$-Donsker, but I think this may be overly complicated, and not necessary.
+% }
+
+% For fixed every $t$,  
+% \begin{align*}
+% \Gamma^*_{\hat{\vmat}}(t) \rightarrow \Gamma^*_{\vmat}(t)	\text{ if } \Gamma_{i, \hat{\vmat}}(t) \rightarrow \Gamma_{i, \vmat}(t) \text{ for every } i \in \{1, 2, \dots, d\}
+% \end{align*}
+
+% The function defined in \eqref{gamma:pow} satisfy this condition
+
+% \begin{lemma}
+% 	Let $t$ be fixed.  By the consistency of our variance estimator, we know that $\hat{Z} \xrightarrow{d} Z$, and by continuous mapping theorem $||\hat{Z}|| \xrightarrow{d} ||Z||$.  Thus it can be shown that $C_{\hat{\vmat}, 0.8} \rightarrow C_{\vmat, 0.8}$ because the distribution functions for both $\hat{\rvv}$ and $\rvv$ are continuous.  
+
+% 	The above findings and Slutsky's theorem imply that $||\hat{Z} + \underline{t}|| - C_{\hat{\vmat}, 0.8} \xrightarrow{d} ||Z - \underline{t}|| + C_{\vmat, 0.8}$ so: 
+% \begin{align*}
+% 	&\Gamma_{i, \hat{Q}}(t) = Pr_{\hat{\distv}}||\left(\hat{Z} + \underline{t}|| > C_{\hat{\distv}, 0.8}\right) = Pr_{\hat{\distv}}\left(||\hat{Z} + \underline{t}|| - C_{\hat{\distv}, 0.8} > 0\right) \rightarrow\\ 
+% 	& Pr_{\distv}\left(||Z + \underline{t}|| - C_{\distv, 0.8} > 0\right) = Pr_{\distv}\left(||Z + \underline{t}|| > C_{\distv, 0.8}\right) =\Gamma_{i, Q}(t) 
+% \end{align*}
+% % \begin{align*}
+% % 	Pr(||\hat{\rvv}|| > c^-_{0.8}) \rightarrow Pr(||\rvv|| > c^-_{0.8}) < 0.8.
+% % \end{align*}
+% \end{lemma}
