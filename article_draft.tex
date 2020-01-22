@@ -327,17 +327,21 @@ is continuous with respect to both $\Sigma$ and $t$.
 
 Since the exponential function, determinate, matrix inverses, and linear operators are all differentiable, they are also all continuous.  Because the multivariate normal pdf is the composition of continuous functions, it is also continuous.
 
-It follows that if $\mu_n \rightarrow \mu$, and $\Sigma_n \rightarrow \Sigma$, then for each $x$, $\psi(x, \mu_n, \Sigma_n) \rightarrow \psi(x, \mu, \Sigma)$.
-This result and the dominated convergence theorem imply the corresponding CDF's are also continuous ($\phi(x, \hat{\mu}, \hat{\Sigma}) + \phi(x, \mu, \Sigma)$ can be used as the dominating measure):
+It follows that if $\mu_n \rightarrow \mu$, and $\Sigma_n \rightarrow \Sigma$, then for each $x$, $\phi(x, \mu_n, \Sigma_n) \rightarrow \phi(x, \mu, \Sigma)$.
+This result and the dominated convergence theorem imply the corresponding CDF's are also continuous ($\phi(x, \hat{\mu}, \hat{\Sigma}) + \phi(x, \mu, \Sigma)$ can be used as the dominating measure): \textcolor{blue}{(dominating function shouldn't depend on $n$)}
 
 \begin{align*}
 	\pf_{\hat{\Sigma}, \hat{\mu}}\left(t \right) = \int_{||x|| < t} \phi(x, \hat{\mu}, \hat{\Sigma})dx \rightarrow \int_{||x|| < t} \phi(x, \mu, \Sigma)dx = \Phi_{\Sigma, \mu}(t).
 \end{align*}
 
+\textcolor{blue}{Show (or find reference showing that) $\Phi_{\Sigma_n,0}^{-1}(0.8)\rightarrow \Phi_{\Sigma,0}^{-1}(0.8)$ when $\Sigma_n\rightarrow \Sigma$. E.g., implicit function theorem will do this}
+
 Because the normal cdf is continuous, we know the normal quantile function will be continuous as well. Also, because $\Phi_{\Sigma, \mu}(t)$ has a bounded derivative, it is uniformly continuous.  These findings imply the following:
 
 \begin{align*}
-	\Gamma_{\hat{\Sigma}}(x) - \Gamma_{\Sigma}(x) &= Pr_{\hat{\distv}}(||\rvv^* + x|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) - Pr_{\distv}(||\rvv^* + x|| > \Phi^{-1}_{\Sigma, 0}(0.8))\\
+	\left|\Gamma_{\hat{\Sigma}}(x) - \Gamma_{\Sigma}(x)\right| &= \left|Pr_{\hat{\distv}}(||\rvv^* + x|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) - Pr_{\distv}(||\rvv^* + x|| > \Phi^{-1}_{\Sigma, 0}(0.8))\right|\\
+	&= \left|\int_{\mathbb{R}^d} \phi(t, 0, \hat{\Sigma}) I\{||t+x|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \} - \phi(t, 0, \Sigma) I\{||t+x|| > \Phi^{-1}_{\Sigma, 0}(0.8) \}dt \right| \\ 
+	&= \left|\int_{\mathbb{R}^d} \phi(t, x, \hat{\Sigma}) I\{||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \} - \phi(t, x, \Sigma) I\{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8) \}dt \right| \\ 
 	&\leq \int_{\mathbb{R}^d} |\phi(t, x, \hat{\Sigma}) I\{||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \} - \phi(t, x, \Sigma) I\{||t|| > \Phi^{-1}_{\Sigma, 0}(0.8) \}|dt \\ 
 	& = \int_{||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8), \Phi^{-1}_{\Sigma, 0}(0.8)} |\phi(t, x, \hat{\Sigma}) - \phi(t, x, \Sigma)|dt + \\
 	& \hspace{5em} \int_{\Phi^{-1}_{\Sigma, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\hat{\Sigma}, 0}(0.8)} |\phi(t, x, \hat{\Sigma})|dt + \int_{\Phi^{-1}_{\hat{\Sigma}, 0}(0.8) \geq ||t|| > \Phi^{-1}_{\Sigma, 0}(0.8)} | \phi(t, x, \Sigma)|dt \\
@@ -352,6 +356,7 @@ Because the normal cdf is continuous, we know the normal quantile function will 
 	& \hspace{5em} \left(\Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) \right) - \left(\Phi_{\hat{\Sigma}, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) -  \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right)+\\
 	& \hspace{5em} \left(\Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8))\right) +  \Phi_{\Sigma, x}(\Phi^{-1}_{\Sigma, 0}(0.8)) - \Phi_{\Sigma, x}(\Phi^{-1}_{\hat{\Sigma}, 0}(0.8)) \\
 \end{align*}
+\textcolor{blue}{LHS should be $|\Gamma_{\Sigma_n}(x_n) - \Gamma_{\Sigma}(x)|$}
 
 Taking the limit as $n \to \infty$ of the quantity above, we find that the first term is zero by dominated convergence theorem.  The other four terms are also zero because of the uniform continuity of $\Phi_{\Sigma, x}$ and continuity of $\Phi^{-1}_{\Sigma, x}$
 \end{proof}
@@ -374,7 +379,7 @@ Under local alternatives,
 
 It has now been establish that under local alternatives the distribution of our estimate converges to $\Gamma^*_{\Sigma}(Z + \underline{h})$.  Denote the CDF of $\Gamma^*_{\Sigma}(Z + t)$ this distribution by $F_{\Sigma, t}$ and the corresponding quantile function of the distribution by $F^{-1}_{\Sigma, t}$.  
 
-To prove unbiasedness at local alternatives, we show 
+To prove unbiasedness at local alternatives, we show \textcolor{blue}{$>$?}
 \begin{align*}
 	F_{\Sigma, t}(F^{-1}_{\Sigma, 0}(1 - \alpha)) \geq F_{\Sigma, 0}(F^{-1}_{\Sigma, 0}(1 - \alpha)) = \alpha
 \end{align*}
@@ -387,7 +392,7 @@ A result of \citep{anderson_integral_1955} is that for two centrally symmetric, 
 \begin{align*}
 	g(\theta) = \int f_1(x) f_2(x - \theta)
 \end{align*}
-is centrally symmetric and ray decreasing.  A function $f(x)$ on $\mathbb{R}^p$ is centrally symmetric if $f(-x) = f(x)$ for every $x$.  A function is unimodal if for every $k$, the set $\{x : f(x) \geq k\}$ is convex. A function $f(x)$ on $\mathbb{R}^p$ is ray decreasing if for every $x$ in $\mathbb{R}^p$, the function $g(\beta) = f(\beta x), \beta \in \mathbb{R}$ is a decreasing function of $\beta$.
+is centrally symmetric and ray decreasing.  A function $f :\mathbb{R}^p\rightarrow\mathbb{R}$ is centrally symmetric if $f(-x) = f(x)$ for every $x$.  A function is unimodal if for every $k$, the set $\{x : f(x) \geq k\}$ is convex. A function $f$ on $\mathbb{R}^p$ is ray decreasing if for every $x$ in $\mathbb{R}^p$, the function $g(\beta) = f(\beta x), \beta \in \mathbb{R}$ is a decreasing function of $\beta$.
 
 For now, we will assume that.  We assume that our tests will always be define our tests in such a way that we reject the null when $\Gamma^*_{\hat{\vmat}}(\sqrt{n} \hat{\boldsymbol{\psi}}) > c$ for some $c$. It is expected that $\Gamma^*_{\vmat}(x)$  increases as $x$ moves away from the origin. For the purposes of this proof it will be useful to define new functions 
 
