@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  22 JAN 2020 12:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  29 JAN 2020 14:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -700,18 +700,18 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/Users/adamelder/Project-1/article_draft.aux)
 \openout1 = `article_draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -793,15 +793,15 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 39.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 39.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+eus on input line 62.
+LaTeX Font Info:    Try loading font information for U+eus on input line 60.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [1
@@ -810,37 +810,48 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 <figure_code/pwr_cmp.jpeg, id=18, 1562.83875pt x 563.10374pt>
 File: figure_code/pwr_cmp.jpeg Graphic file (type jpg)
 <use figure_code/pwr_cmp.jpeg>
-Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 132.
+Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 128.
 (pdftex.def)             Requested size: 542.02501pt x 195.29347pt.
  [2] [3 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 216.
+
 <uncor.jpg, id=29, 3613.5pt x 2107.875pt>
 File: uncor.jpg Graphic file (type jpg)
 <use uncor.jpg>
-Package pdftex.def Info: uncor.jpg  used on input line 219.
+Package pdftex.def Info: uncor.jpg  used on input line 218.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 223.
+
 <some_core.jpg, id=30, 3613.5pt x 2107.875pt>
 File: some_core.jpg Graphic file (type jpg)
 <use some_core.jpg>
-Package pdftex.def Info: some_core.jpg  used on input line 220.
+Package pdftex.def Info: some_core.jpg  used on input line 225.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 230.
+
 <lots_cor.jpg, id=31, 3613.5pt x 2107.875pt>
 File: lots_cor.jpg Graphic file (type jpg)
 <use lots_cor.jpg>
-Package pdftex.def Info: lots_cor.jpg  used on input line 221.
+Package pdftex.def Info: lots_cor.jpg  used on input line 232.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
- [4] [5 </Users/adamelder/Project-1/uncor.jpg> </Users/adamelder/Project-1/some_core.jpg>] [6 </Users/adamelder/Project-1/lots_cor.jpg>] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[4] [5 </Users/adamelder/Project-1/uncor.jpg>] [6 </Users/adamelder/Project-1/some_core.jpg> </Users/adamelder/Project-1/lots_cor.jpg>] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
 
  []
 
-[9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 452.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 479.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 452.
- (/Users/adamelder/Project-1/article_draft.bbl
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 479.
+ [10] (/Users/adamelder/Project-1/article_draft.bbl
 Underfull \hbox (badness 6047) in paragraph at lines 34--41
 []\OT1/cmr/m/n/10 Olive Jean Dunn.  Mul-ti-ple com-par-isons among means.  56(293):52--64, b.  ISSN 0162-1459.  doi:
  []
@@ -855,7 +866,7 @@ Underfull \hbox (badness 5431) in paragraph at lines 65--73
 \OT1/cmr/m/n/10 i-cant pre-dic-tors.  110(512):1422--1433.  ISSN 0162-1459.  doi: 10.1080/01621459.2015.1095099.  URL
  []
 
-[10]
+
 Underfull \hbox (badness 10000) in paragraph at lines 83--90
 []\OT1/cmr/m/n/10 Neyman Jerzy, Pear-son Egon Sharpe, and Pear-son Karl.  IX. on the prob-lem of the most ef-
  []
@@ -882,15 +893,15 @@ Underfull \hbox (badness 1478) in paragraph at lines 102--108
 
 ) [11] (/Users/adamelder/Project-1/article_draft.aux) ) 
 Here is how much of TeX's memory you used:
- 25508 strings out of 492616
- 485341 string characters out of 6129482
- 537606 words of memory out of 5000000
- 29041 multiletter control sequences out of 15000+600000
+ 25511 strings out of 492616
+ 485378 string characters out of 6129482
+ 538632 words of memory out of 5000000
+ 29044 multiletter control sequences out of 15000+600000
  539922 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,73p,1002b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/adamelder/Project-1/article_draft.pdf (11 pages, 1761618 bytes).
+Output written on /Users/adamelder/Project-1/article_draft.pdf (11 pages, 1766530 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  83 compressed objects within 1 object stream
