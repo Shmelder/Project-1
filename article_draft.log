@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 FEB 2020 09:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 FEB 2020 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -700,18 +700,18 @@ Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (/Users/adamelder/Project-1/article_draft.aux)
 \openout1 = `article_draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -793,212 +793,128 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-
-Package natbib Warning: Citation `neyman_jerzy_ix._1933' on page 1 undefined on input line 37.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 39.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 39.
+LaTeX Font Info:    Try loading font information for U+msb on input line 41.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-Package natbib Warning: Citation `miller_simultaneous_1981' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `dunn_estimation_1959' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `dunn_multiple_1961' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `hochberg_sharper_1988' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `holm_simple_1979' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `s._holland_improved_1988' on page 1 undefined on input line 44.
-
-
-Package natbib Warning: Citation `donoho_higher_2004' on page 1 undefined on input line 46.
-
-
-Package natbib Warning: Citation `mckeague_adaptive_2015' on page 1 undefined on input line 46.
-
-
-Package natbib Warning: Citation `pan_powerful_2014' on page 1 undefined on input line 46.
-
-
-Package natbib Warning: Citation `xu_adaptive_2016' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Reference `sec:Working Examples' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Reference `sec:prop_test_proc' on page 1 undefined on input line 50.
-
-LaTeX Font Info:    Try loading font information for U+eus on input line 60.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
+LaTeX Font Info:    Try loading font information for U+eus on input line 62.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
+) [1
 
-Package natbib Warning: Citation `zhang_comment_2015' on page 1 undefined on input line 63.
-
-
-Package natbib Warning: Citation `mckeague_adaptive_2015' on page 1 undefined on input line 63.
-
-[1
-
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Reference `eqn:alpha_rej' on page 2 undefined on input line 109.
-
-
-LaTeX Warning: Reference `eqn:alpha_rej' on page 2 undefined on input line 113.
-
-
-LaTeX Warning: Reference `eqn:region' on page 2 undefined on input line 113.
-
-[2]
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
 <figure_code/pwr_cmp.jpeg, id=25, 1562.83875pt x 563.10374pt>
 File: figure_code/pwr_cmp.jpeg Graphic file (type jpg)
 <use figure_code/pwr_cmp.jpeg>
-Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 141.
+Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 154.
 (pdftex.def)             Requested size: 542.02501pt x 195.29347pt.
-
-
-LaTeX Warning: Reference `eqn:simp_test' on page 3 undefined on input line 146.
-
-
-LaTeX Warning: Reference `fig:figure1' on page 3 undefined on input line 146.
-
-
-Package natbib Warning: Citation `pinelis_schur2-concavity_2014' on page 3 undefined on input line 152.
-
-[3 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>]
-
-Package natbib Warning: Citation `zhang_comment_2015' on page 4 undefined on input line 219.
-
+ [3 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>] [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 223.
+               Default added (so using `tbp') on input line 236.
 
-<uncor.jpg, id=29, 3613.5pt x 2107.875pt>
+<uncor.jpg, id=32, 3613.5pt x 2107.875pt>
 File: uncor.jpg Graphic file (type jpg)
 <use uncor.jpg>
-Package pdftex.def Info: uncor.jpg  used on input line 225.
+Package pdftex.def Info: uncor.jpg  used on input line 238.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 230.
+               Default added (so using `tbp') on input line 243.
 
-<some_core.jpg, id=30, 3613.5pt x 2107.875pt>
+<some_core.jpg, id=33, 3613.5pt x 2107.875pt>
 File: some_core.jpg Graphic file (type jpg)
 <use some_core.jpg>
-Package pdftex.def Info: some_core.jpg  used on input line 232.
+Package pdftex.def Info: some_core.jpg  used on input line 245.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
 
-LaTeX Warning: Reference `fig:uncor' on page 4 undefined on input line 233.
-
-
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 237.
+               Default added (so using `tbp') on input line 250.
 
-
-LaTeX Warning: File `lots_cor.jpg' not found on input line 239.
-
-
-/Users/adamelder/Project-1/article_draft.tex:239: Package pdftex.def Error: File `lots_cor.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.239 ...raphics[width = \linewidth]{lots_cor.jpg}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Reference `fig:uncor' on page 4 undefined on input line 240.
-
-[4] [5 </Users/adamelder/Project-1/uncor.jpg>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 265.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+<lots_cor.jpg, id=34, 3613.5pt x 2107.875pt>
+File: lots_cor.jpg Graphic file (type jpg)
+<use lots_cor.jpg>
+Package pdftex.def Info: lots_cor.jpg  used on input line 252.
+(pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 278.
+(/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 265.
- [6 </Users/adamelder/Project-1/some_core.jpg>] [7]
-
-LaTeX Warning: Reference `thm:cnst' on page 8 undefined on input line 301.
-
-
-LaTeX Warning: Reference `eqn:nrm_bounds' on page 8 undefined on input line 316.
-
-
-LaTeX Warning: Reference `eqn:prod_tlte' on page 8 undefined on input line 323.
-
-[8] [9]
-
-LaTeX Warning: Reference `lemma:cont_of_gam' on page 10 undefined on input line 413.
-
-
-Package natbib Warning: Citation `anderson_integral_1955' on page 10 undefined on input line 427.
-
-
-Package natbib Warning: Citation `anderson_integral_1955' on page 10 undefined on input line 432.
-
-[10]
-
-LaTeX Warning: Reference `lemma:min_cent_sym_unm' on page 11 undefined on input line 479.
-
-
-LaTeX Warning: Reference `lemma:indct_cent_sym_unm' on page 11 undefined on input line 479.
-
-
-Package natbib Warning: Citation `anderson_integral_1955' on page 11 undefined on input line 487.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 498--498
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 278.
+ [5 </Users/adamelder/Project-1/uncor.jpg>] [6 </Users/adamelder/Project-1/some_core.jpg> </Users/adamelder/Project-1/lots_cor.jpg>] [7] [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 511--511
 
  []
 
+[10] (/Users/adamelder/Project-1/article_draft.bbl
+Underfull \hbox (badness 6047) in paragraph at lines 34--41
+[]\OT1/cmr/m/n/10 Olive Jean Dunn.  Mul-ti-ple com-par-isons among means.  56(293):52--64, b.  ISSN 0162-1459.  doi:
+ []
 
-Package natbib Warning: Citation `omelka_testing_2012' on page 11 undefined on input line 498.
+
+Underfull \hbox (badness 5787) in paragraph at lines 65--73
+[]\OT1/cmr/m/n/10 Ian W. McK-eague and Min Qian.  An adap-tive re-sam-pling test for de-tect-ing the pres-ence of sig-nif-
+ []
 
 
-Package natbib Warning: Citation `gupta_inequalitites_1972' on page 11 undefined on input line 498.
+Underfull \hbox (badness 5431) in paragraph at lines 65--73
+\OT1/cmr/m/n/10 i-cant pre-dic-tors.  110(512):1422--1433.  ISSN 0162-1459.  doi: 10.1080/01621459.2015.1095099.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--90
+[]\OT1/cmr/m/n/10 Neyman Jerzy, Pear-son Egon Sharpe, and Pear-son Karl.  IX. on the prob-lem of the most ef-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--90
+\OT1/cmr/m/n/10 fi-cient tests of sta-tis-ti-cal hy-pothe-ses.  231(694):289--337.  doi: 10.1098/rsta.1933.0009.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+[]\OT1/cmr/m/n/10 M. Omelka and M. Pauly.  Test-ing equal-ity of cor-re-la-tion co-ef-fi-cients in two pop-u-la-tions via per-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+\OT1/cmr/m/n/10 mu-ta-tion meth-ods.  142(6):1396--1406.  ISSN 0378-3758.  doi: 10.1016/j.jspi.2011.12.018.  URL
+ []
 
 [11]
-No file article_draft.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[12] (/Users/adamelder/Project-1/article_draft.aux)
-
-LaTeX Warning: There were undefined references.
+Underfull \hbox (badness 1478) in paragraph at lines 102--108
+\OT1/cmr/m/n/10 for rare vari-ants.  197(4):1081--1095.  ISSN 0016-6731, 1943-2631.  doi: 10.1534/ge-net-ics.114.165035.  URL
+ []
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Underfull \hbox (badness 10000) in paragraph at lines 110--118
+[]\OT1/cmr/m/n/10 Iosif Pinelis.  Schur2-concavity prop-er-ties of gaus-sian mea-sures, with ap-pli-ca-tions to hy-pothe-
+ []
 
- ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--118
+\OT1/cmr/m/n/10 ses test-ing.  124:384--397.  ISSN 0047-259X.  doi: 10.1016/j.jmva.2013.11.011.  URL
+ []
+
+) [12] (/Users/adamelder/Project-1/article_draft.aux) ) 
 Here is how much of TeX's memory you used:
- 25455 strings out of 492616
- 483926 string characters out of 6129482
- 537908 words of memory out of 5000000
- 28990 multiletter control sequences out of 15000+600000
+ 25519 strings out of 492616
+ 485542 string characters out of 6129482
+ 538691 words of memory out of 5000000
+ 29052 multiletter control sequences out of 15000+600000
  539922 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,18n,73p,975b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/adamelder/Project-1/article_draft.pdf (12 pages, 1297699 bytes).
+Output written on /Users/adamelder/Project-1/article_draft.pdf (12 pages, 1771517 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
+ 122 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

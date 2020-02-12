@@ -1,0 +1,92 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: article_draft.aux
+The style file: plainnat.bst
+Database file #1: paper_bib.bib
+Warning--empty journal in anderson_integral_1955
+Warning--empty year in anderson_integral_1955
+Warning--empty year in anderson_integral_1955
+Warning--empty journal in donoho_higher_2004
+Warning--empty year in donoho_higher_2004
+Warning--empty year in donoho_higher_2004
+Warning--empty journal in dunn_estimation_1959
+Warning--empty year in dunn_estimation_1959
+Warning--empty journal in dunn_multiple_1961
+Warning--empty year in dunn_multiple_1961
+Warning--empty booktitle in gupta_inequalitites_1972
+Warning--empty year in gupta_inequalitites_1972
+Warning--empty year in gupta_inequalitites_1972
+Warning--empty journal in hochberg_sharper_1988
+Warning--empty year in hochberg_sharper_1988
+Warning--empty year in hochberg_sharper_1988
+Warning--empty journal in holm_simple_1979
+Warning--empty year in holm_simple_1979
+Warning--empty year in holm_simple_1979
+Warning--empty journal in mckeague_adaptive_2015
+Warning--empty year in mckeague_adaptive_2015
+Warning--empty year in mckeague_adaptive_2015
+Warning--empty year in miller_simultaneous_1981
+Warning--empty year in miller_simultaneous_1981
+Warning--empty journal in neyman_jerzy_ix._1933
+Warning--empty year in neyman_jerzy_ix._1933
+Warning--empty year in neyman_jerzy_ix._1933
+Warning--empty journal in omelka_testing_2012
+Warning--empty year in omelka_testing_2012
+Warning--empty year in omelka_testing_2012
+Warning--empty journal in pan_powerful_2014
+Warning--empty year in pan_powerful_2014
+Warning--empty year in pan_powerful_2014
+Warning--empty journal in pinelis_schur2-concavity_2014
+Warning--empty year in pinelis_schur2-concavity_2014
+Warning--empty year in pinelis_schur2-concavity_2014
+Warning--empty journal in s._holland_improved_1988
+Warning--empty year in s._holland_improved_1988
+Warning--empty year in s._holland_improved_1988
+Warning--empty journal in xu_adaptive_2016
+Warning--empty year in xu_adaptive_2016
+Warning--empty year in xu_adaptive_2016
+Warning--empty journal in zhang_comment_2015
+Warning--empty year in zhang_comment_2015
+Warning--empty year in zhang_comment_2015
+You've used 16 entries,
+            2773 wiz_defined-function locations,
+            708 strings with 8201 characters,
+and the built_in function-call counts, 7851 in all, are:
+= -- 763
+> -- 349
+< -- 12
++ -- 122
+- -- 105
+* -- 705
+:= -- 1204
+add.period$ -- 89
+call.type$ -- 16
+change.case$ -- 83
+chr.to.int$ -- 15
+cite$ -- 77
+duplicate$ -- 326
+empty$ -- 636
+format.name$ -- 131
+if$ -- 1596
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 17
+newline$ -- 128
+num.names$ -- 64
+pop$ -- 203
+preamble$ -- 1
+purify$ -- 67
+quote$ -- 0
+skip$ -- 182
+stack$ -- 0
+substring$ -- 394
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 171
+warning$ -- 45
+while$ -- 76
+width$ -- 0
+write$ -- 267
+(There were 45 warnings)
