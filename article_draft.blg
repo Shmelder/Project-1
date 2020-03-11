@@ -27,9 +27,6 @@ Warning--empty year in mckeague_adaptive_2015
 Warning--empty year in mckeague_adaptive_2015
 Warning--empty year in miller_simultaneous_1981
 Warning--empty year in miller_simultaneous_1981
-Warning--empty journal in neyman_jerzy_ix._1933
-Warning--empty year in neyman_jerzy_ix._1933
-Warning--empty year in neyman_jerzy_ix._1933
 Warning--empty journal in omelka_testing_2012
 Warning--empty year in omelka_testing_2012
 Warning--empty year in omelka_testing_2012
@@ -48,45 +45,45 @@ Warning--empty year in xu_adaptive_2016
 Warning--empty journal in zhang_comment_2015
 Warning--empty year in zhang_comment_2015
 Warning--empty year in zhang_comment_2015
-You've used 16 entries,
+You've used 15 entries,
             2773 wiz_defined-function locations,
-            708 strings with 8201 characters,
-and the built_in function-call counts, 7851 in all, are:
-= -- 763
-> -- 349
+            700 strings with 7946 characters,
+and the built_in function-call counts, 7314 in all, are:
+= -- 713
+> -- 319
 < -- 12
-+ -- 122
-- -- 105
-* -- 705
-:= -- 1204
-add.period$ -- 89
-call.type$ -- 16
-change.case$ -- 83
-chr.to.int$ -- 15
-cite$ -- 77
-duplicate$ -- 326
-empty$ -- 636
-format.name$ -- 131
-if$ -- 1596
++ -- 112
+- -- 96
+* -- 650
+:= -- 1123
+add.period$ -- 84
+call.type$ -- 15
+change.case$ -- 77
+chr.to.int$ -- 14
+cite$ -- 72
+duplicate$ -- 305
+empty$ -- 595
+format.name$ -- 121
+if$ -- 1488
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 128
-num.names$ -- 64
-pop$ -- 203
+missing$ -- 16
+newline$ -- 121
+num.names$ -- 60
+pop$ -- 188
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 62
 quote$ -- 0
-skip$ -- 182
+skip$ -- 171
 stack$ -- 0
-substring$ -- 394
+substring$ -- 367
 swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 171
-warning$ -- 45
-while$ -- 76
+type$ -- 160
+warning$ -- 42
+while$ -- 71
 width$ -- 0
-write$ -- 267
-(There were 45 warnings)
+write$ -- 252
+(There were 42 warnings)

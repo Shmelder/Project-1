@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  12 FEB 2020 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 MAR 2020 11:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**article_draft.tex
+**/Users/adamelder/Project-1/article_draft.tex
 (/Users/adamelder/Project-1/article_draft.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
@@ -645,17 +645,38 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip71
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count302
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+\AM@pagewidth=\dimen287
+\AM@pageheight=\dimen288
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box78
+\AM@global@opts=\toks49
+\AM@toc@title=\toks50
+\c@AM@survey=\count303
+\AM@templatesizebox=\box79
 ) (/usr/local/texlive/2019/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box78
-\UL@hyphenbox=\box79
+\UL@box=\box80
+\UL@hyphenbox=\box81
 \UL@skip=\skip72
-\UL@hook=\toks49
-\UL@height=\dimen287
-\UL@pe=\count303
-\UL@pixel=\dimen288
-\ULC@box=\box80
+\UL@hook=\toks51
+\UL@height=\dimen289
+\UL@pe=\count304
+\UL@pixel=\dimen290
+\ULC@box=\box82
 Package: ulem 2012/05/18
-\ULdepth=\dimen289
+\ULdepth=\dimen291
 ) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2019/05/04 3.31 The Babel package
  (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
@@ -664,17 +685,17 @@ File: switch.def 2019/05/04 3.31 Babel switching mechanism
 Language: english 2017/06/06 v3.3r English support from the babel system
  (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2019/05/04 3.31 Babel common definitions
-\babel@savecnt=\count304
-\U@D=\dimen290
+\babel@savecnt=\count305
+\U@D=\dimen292
  (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count305
+\bbl@dirlevel=\count306
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-\c@theorem=\count306
-\c@refproof=\count307
+\c@theorem=\count307
+\c@refproof=\count308
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/euscript.sty
 Package: euscript 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
@@ -685,33 +706,37 @@ Package: algpseudocode
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
 
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count308
-\c@ALG@rem=\count309
-\c@ALG@nested=\count310
+\c@ALG@line=\count309
+\c@ALG@rem=\count310
+\c@ALG@nested=\count311
 \ALG@tlm=\skip73
 \ALG@thistlm=\skip74
-\c@ALG@Lnr=\count311
-\c@ALG@blocknr=\count312
-\c@ALG@storecount=\count313
-\c@ALG@tmpcounter=\count314
+\c@ALG@Lnr=\count312
+\c@ALG@blocknr=\count313
+\c@ALG@storecount=\count314
+\c@ALG@tmpcounter=\count315
 \ALG@tmplength=\skip75
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/Users/adamelder/Project-1/article_draft.aux)
+) (/Users/adamelder/Project-1/article_draft.aux
+
+LaTeX Warning: Label `fig:magnitude' multiply defined.
+
+)
 \openout1 = `article_draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -749,28 +774,24 @@ LaTeX Font Info:    ... okay on input line 35.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count315
-\scratchdimen=\dimen291
-\scratchbox=\box81
-\nofMPsegments=\count316
-\nofMParguments=\count317
-\everyMPshowfont=\toks50
-\MPscratchCnt=\count318
-\MPscratchDim=\dimen292
-\MPnumerator=\count319
-\makeMPintoPDFobject=\count320
-\everyMPtoPDFconversion=\toks51
+\scratchcounter=\count316
+\scratchdimen=\dimen293
+\scratchbox=\box83
+\nofMPsegments=\count317
+\nofMParguments=\count318
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count319
+\MPscratchDim=\dimen294
+\MPnumerator=\count320
+\makeMPintoPDFobject=\count321
+\everyMPtoPDFconversion=\toks53
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-))) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
@@ -793,70 +814,90 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+\AtBeginShipoutBox=\box84
+LaTeX Font Info:    Try loading font information for U+msa on input line 66.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 66.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+eus on input line 62.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
 ) [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figure_code/pwr_cmp.jpeg, id=25, 1562.83875pt x 563.10374pt>
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+eus on input line 72.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+) [2] [3] [4]
+<figure_code/pwr_cmp.jpeg, id=31, 1562.83875pt x 563.10374pt>
 File: figure_code/pwr_cmp.jpeg Graphic file (type jpg)
 <use figure_code/pwr_cmp.jpeg>
-Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 154.
+Package pdftex.def Info: figure_code/pwr_cmp.jpeg  used on input line 196.
 (pdftex.def)             Requested size: 542.02501pt x 195.29347pt.
- [3 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>] [4]
+ [5 </Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg>] [6]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 236.
+               Default added (so using `tbp') on input line 278.
 
-<uncor.jpg, id=32, 3613.5pt x 2107.875pt>
+<uncor.jpg, id=38, 3613.5pt x 2107.875pt>
 File: uncor.jpg Graphic file (type jpg)
 <use uncor.jpg>
-Package pdftex.def Info: uncor.jpg  used on input line 238.
+Package pdftex.def Info: uncor.jpg  used on input line 280.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 243.
+               Default added (so using `tbp') on input line 285.
 
-<some_core.jpg, id=33, 3613.5pt x 2107.875pt>
+<some_core.jpg, id=39, 3613.5pt x 2107.875pt>
 File: some_core.jpg Graphic file (type jpg)
 <use some_core.jpg>
-Package pdftex.def Info: some_core.jpg  used on input line 245.
+Package pdftex.def Info: some_core.jpg  used on input line 287.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 250.
+               Default added (so using `tbp') on input line 292.
 
-<lots_cor.jpg, id=34, 3613.5pt x 2107.875pt>
+<lots_cor.jpg, id=40, 3613.5pt x 2107.875pt>
 File: lots_cor.jpg Graphic file (type jpg)
 <use lots_cor.jpg>
-Package pdftex.def Info: lots_cor.jpg  used on input line 252.
+Package pdftex.def Info: lots_cor.jpg  used on input line 294.
 (pdftex.def)             Requested size: 542.02501pt x 316.1676pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 278.
+[7] [8 </Users/adamelder/Project-1/uncor.jpg>] [9 </Users/adamelder/Project-1/some_core.jpg> </Users/adamelder/Project-1/lots_cor.jpg>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 311.
+
+<magnitude.pdf, id=51, 867.24pt x 505.89pt>
+File: magnitude.pdf Graphic file (type pdf)
+<use magnitude.pdf>
+Package pdftex.def Info: magnitude.pdf  used on input line 313.
+(pdftex.def)             Requested size: 542.02501pt x 316.19589pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 318.
+
+<power.pdf, id=52, 867.24pt x 505.89pt>
+File: power.pdf Graphic file (type pdf)
+<use power.pdf>
+Package pdftex.def Info: power.pdf  used on input line 320.
+(pdftex.def)             Requested size: 542.02501pt x 316.19589pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 328.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 278.
- [5 </Users/adamelder/Project-1/uncor.jpg>] [6 </Users/adamelder/Project-1/some_core.jpg> </Users/adamelder/Project-1/lots_cor.jpg>] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 511--511
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 328.
+ [10 </Users/adamelder/Project-1/magnitude.pdf>] [11 </Users/adamelder/Project-1/power.pdf>] [12] [13] [14] [15] [16] [17] [18]
+Underfull \hbox (badness 10000) in paragraph at lines 636--636
 
  []
 
-[10] (/Users/adamelder/Project-1/article_draft.bbl
+[19] (/Users/adamelder/Project-1/article_draft.bbl
 Underfull \hbox (badness 6047) in paragraph at lines 34--41
 []\OT1/cmr/m/n/10 Olive Jean Dunn.  Mul-ti-ple com-par-isons among means.  56(293):52--64, b.  ISSN 0162-1459.  doi:
  []
 
-
+[20]
 Underfull \hbox (badness 5787) in paragraph at lines 65--73
 []\OT1/cmr/m/n/10 Ian W. McK-eague and Min Qian.  An adap-tive re-sam-pling test for de-tect-ing the pres-ence of sig-nif-
  []
@@ -867,54 +908,48 @@ Underfull \hbox (badness 5431) in paragraph at lines 65--73
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
-[]\OT1/cmr/m/n/10 Neyman Jerzy, Pear-son Egon Sharpe, and Pear-son Karl.  IX. on the prob-lem of the most ef-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--90
-\OT1/cmr/m/n/10 fi-cient tests of sta-tis-ti-cal hy-pothe-ses.  231(694):289--337.  doi: 10.1098/rsta.1933.0009.  URL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 92--100
+Underfull \hbox (badness 10000) in paragraph at lines 82--90
 []\OT1/cmr/m/n/10 M. Omelka and M. Pauly.  Test-ing equal-ity of cor-re-la-tion co-ef-fi-cients in two pop-u-la-tions via per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--100
+Underfull \hbox (badness 10000) in paragraph at lines 82--90
 \OT1/cmr/m/n/10 mu-ta-tion meth-ods.  142(6):1396--1406.  ISSN 0378-3758.  doi: 10.1016/j.jspi.2011.12.018.  URL
  []
 
-[11]
-Underfull \hbox (badness 1478) in paragraph at lines 102--108
+
+Underfull \hbox (badness 1478) in paragraph at lines 92--98
 \OT1/cmr/m/n/10 for rare vari-ants.  197(4):1081--1095.  ISSN 0016-6731, 1943-2631.  doi: 10.1534/ge-net-ics.114.165035.  URL
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--118
+Underfull \hbox (badness 10000) in paragraph at lines 100--108
 []\OT1/cmr/m/n/10 Iosif Pinelis.  Schur2-concavity prop-er-ties of gaus-sian mea-sures, with ap-pli-ca-tions to hy-pothe-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--118
+Underfull \hbox (badness 10000) in paragraph at lines 100--108
 \OT1/cmr/m/n/10 ses test-ing.  124:384--397.  ISSN 0047-259X.  doi: 10.1016/j.jmva.2013.11.011.  URL
  []
 
-) [12] (/Users/adamelder/Project-1/article_draft.aux) ) 
+) [21] (/Users/adamelder/Project-1/article_draft.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 25519 strings out of 492616
- 485542 string characters out of 6129482
- 538691 words of memory out of 5000000
- 29052 multiletter control sequences out of 15000+600000
+ 26195 strings out of 492616
+ 496701 string characters out of 6129482
+ 548180 words of memory out of 5000000
+ 29711 multiletter control sequences out of 15000+600000
  539922 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,18n,73p,975b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,18n,73p,1469b,317s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on /Users/adamelder/Project-1/article_draft.pdf (12 pages, 1771517 bytes).
+Output written on /Users/adamelder/Project-1/article_draft.pdf (21 pages, 1796626 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 166 PDF objects out of 1000 (max. 8388607)
+ 115 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
