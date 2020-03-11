@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{15}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -77,16 +77,6 @@ Rupert G.~Jr Miller.
 \newblock Springer Series in Statistics. Springer-Verlag, 2 edition.
 \newblock ISBN 978-1-4613-8124-2.
 \newblock URL \url{https://www.springer.com/la/book/9781461381242}.
-
-\bibitem[{Neyman Jerzy} et~al.(){Neyman Jerzy}, {Pearson Egon Sharpe}, and
-  {Pearson Karl}]{neyman_jerzy_ix._1933}
-{Neyman Jerzy}, {Pearson Egon Sharpe}, and {Pearson Karl}.
-\newblock {IX}. on the problem of the most efficient tests of statistical
-  hypotheses.
-\newblock 231\penalty0 (694):\penalty0 289--337.
-\newblock \doi{10.1098/rsta.1933.0009}.
-\newblock URL
-  \url{https://royalsocietypublishing.org/doi/abs/10.1098/rsta.1933.0009}.
 
 \bibitem[Omelka and Pauly()]{omelka_testing_2012}
 M.~Omelka and M.~Pauly.
