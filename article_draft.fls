@@ -241,8 +241,12 @@ INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT /Users/adamelder/Project-1/article_draft.pdf
+INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -264,8 +268,6 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
-OUTPUT /Users/adamelder/Project-1/article_draft.pdf
-INPUT /usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
 INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/ueus.fd
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
@@ -273,9 +275,9 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm7.t
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm5.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg
-INPUT /Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg
-INPUT /Users/adamelder/Project-1/figure_code/pwr_cmp.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
 INPUT /Users/adamelder/Project-1/uncor.jpg
 INPUT /Users/adamelder/Project-1/uncor.jpg
 INPUT /Users/adamelder/Project-1/uncor.jpg
@@ -302,6 +304,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /Users/adamelder/Project-1/article_draft.aux
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
@@ -310,6 +313,7 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
