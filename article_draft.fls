@@ -275,9 +275,9 @@ INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm7.t
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm5.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
-INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
-INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmp.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmpr.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmpr.jpeg
+INPUT /Users/adamelder/Project-1/figure_code/new_pwr_cmpr.jpeg
 INPUT /Users/adamelder/Project-1/uncor.jpg
 INPUT /Users/adamelder/Project-1/uncor.jpg
 INPUT /Users/adamelder/Project-1/uncor.jpg
@@ -293,11 +293,11 @@ INPUT /Users/adamelder/Project-1/magnitude.pdf
 INPUT /Users/adamelder/Project-1/power.pdf
 INPUT /Users/adamelder/Project-1/power.pdf
 INPUT /Users/adamelder/Project-1/power.pdf
-INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /Users/adamelder/Project-1/article_draft.bbl
 INPUT /Users/adamelder/Project-1/article_draft.bbl
 INPUT /usr/local/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm

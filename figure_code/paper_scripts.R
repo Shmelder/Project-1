@@ -161,6 +161,6 @@ make_three_plot <- function(seed){
 }
 
 cols <- pal_freiburg_info <- c("#2a6ebb", "#a7c1e3", "#739600",
-                               "#7b2927", "#de3831",  "#92d400")
+                               "#f52c2c", "#a10500",  "#92d400")
 
 make_three_plot(201)
