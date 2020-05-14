@@ -84,10 +84,12 @@ where_are_you <- function(points, max_cut, l2_cut){
   return(col_ind)
 }
 
-make_three_plot <- function(seed){
+make_three_plot <- function(seed, p_cor = 0){
   set.seed(seed)
   par(mar = c(5, 2.5, 0, 0.5))
-  my_data <- MASS::mvrnorm(n = 100, mu = rep(0, 2), Sigma = diag(2))
+  s_mat <- diag(2)
+  s_mat[1, 2] <- s_mat[2, 1] <- p_cor
+  my_data <- MASS::mvrnorm(n = 100, mu = rep(0, 2), Sigma = s_mat)
   par(mfrow = c(1, 3))
   p_xlim <- range(my_data[, 1]) * 1.2
   p_ylim <- range(my_data[, 2]) * 1.2
@@ -138,7 +140,7 @@ make_three_plot <- function(seed){
   mtext("(B)", side = 3, line = -1, adj = 0.1, cex = 1.6, padj = 1)
   lines(max_line[, 1], max_line[, 2], col = cols[1], lwd = 4)
   lines(l_2_line[, 1], l_2_line[, 2], col = cols[5], lwd = 4)
-  my_data_2 <- MASS::mvrnorm(n = 100, mu = c(max_cutoff * 1.2, 0), Sigma = diag(2))
+  my_data_2 <- MASS::mvrnorm(n = 100, mu = c(max_cutoff * 1.2, 0), Sigma = s_mat)
 
   points(my_data_2[, 1], my_data_2[, 2], pch = 16,
          col = where_are_you(my_data_2, max_cut = max_cutoff,
@@ -151,7 +153,7 @@ make_three_plot <- function(seed){
   mtext("(C)", side = 3, line = -1, adj = 0.1, cex = 1.6, padj = 1)
   lines(max_line[, 1], max_line[, 2], col = cols[1], lwd = 4)
   lines(l_2_line[, 1], l_2_line[, 2], col = cols[5], lwd = 4)
-  my_data_3 <- MASS::mvrnorm(n = 100, mu = 1.2 * rep(l_2_cutoff/sqrt(2), 2), Sigma = diag(2))
+  my_data_3 <- MASS::mvrnorm(n = 100, mu = 1.2 * rep(l_2_cutoff/sqrt(2), 2), Sigma = s_mat)
   
   points(my_data_3[, 1], my_data_3[, 2], pch = 16,
          col = where_are_you(my_data_3, max_cut = max_cutoff,
@@ -163,4 +165,4 @@ make_three_plot <- function(seed){
 cols <- pal_freiburg_info <- c("#2a6ebb", "#a7c1e3", "#739600",
                                "#f52c2c", "#a10500",  "#92d400")
 
-make_three_plot(201)
+make_three_plot(201, p_cor = 0.6)

@@ -13,77 +13,96 @@ Warning--empty journal in dunn_estimation_1959
 Warning--empty year in dunn_estimation_1959
 Warning--empty journal in dunn_multiple_1961
 Warning--empty year in dunn_multiple_1961
-Warning--empty booktitle in gupta_inequalitites_1972
-Warning--empty year in gupta_inequalitites_1972
-Warning--empty year in gupta_inequalitites_1972
+Warning--empty journal in eaton_multivariate_1991
+Warning--empty year in eaton_multivariate_1991
+Warning--empty year in eaton_multivariate_1991
+Warning--empty journal in friedman_regularization_2010
+Warning--empty year in friedman_regularization_2010
+Warning--empty year in friedman_regularization_2010
 Warning--empty journal in hochberg_sharper_1988
 Warning--empty year in hochberg_sharper_1988
 Warning--empty year in hochberg_sharper_1988
 Warning--empty journal in holm_simple_1979
 Warning--empty year in holm_simple_1979
 Warning--empty year in holm_simple_1979
+Warning--empty journal in lendle_ltmle_2017
+Warning--empty year in lendle_ltmle_2017
+Warning--empty year in lendle_ltmle_2017
 Warning--empty journal in mckeague_adaptive_2015
 Warning--empty year in mckeague_adaptive_2015
 Warning--empty year in mckeague_adaptive_2015
 Warning--empty year in miller_simultaneous_1981
 Warning--empty year in miller_simultaneous_1981
-Warning--empty journal in omelka_testing_2012
-Warning--empty year in omelka_testing_2012
-Warning--empty year in omelka_testing_2012
 Warning--empty journal in pan_powerful_2014
 Warning--empty year in pan_powerful_2014
 Warning--empty year in pan_powerful_2014
 Warning--empty journal in pinelis_schur2-concavity_2014
 Warning--empty year in pinelis_schur2-concavity_2014
 Warning--empty year in pinelis_schur2-concavity_2014
+Warning--empty journal in polley_super_2010
+Warning--empty year in polley_super_2010
+Warning--empty year in polley_super_2010
+Warning--empty journal in rinott_convexity_1976
+Warning--empty year in rinott_convexity_1976
+Warning--empty year in rinott_convexity_1976
 Warning--empty journal in s._holland_improved_1988
 Warning--empty year in s._holland_improved_1988
 Warning--empty year in s._holland_improved_1988
+Warning--empty journal in simon_blockwise_2013
+Warning--empty year in simon_blockwise_2013
+Warning--empty year in simon_blockwise_2013
+Warning--empty journal in tibshirani_strong_2012
+Warning--empty year in tibshirani_strong_2012
+Warning--empty year in tibshirani_strong_2012
+Warning--empty year in tong_multivariate_2012
+Warning--empty year in tong_multivariate_2012
+Warning--empty year in van_der_vaart_asymptotic_2000
+Warning--empty year in van_der_vaart_asymptotic_2000
 Warning--empty journal in xu_adaptive_2016
 Warning--empty year in xu_adaptive_2016
 Warning--empty year in xu_adaptive_2016
 Warning--empty journal in zhang_comment_2015
 Warning--empty year in zhang_comment_2015
 Warning--empty year in zhang_comment_2015
-You've used 15 entries,
+You've used 22 entries,
             2773 wiz_defined-function locations,
-            700 strings with 7946 characters,
-and the built_in function-call counts, 7314 in all, are:
-= -- 713
-> -- 319
-< -- 12
-+ -- 112
-- -- 96
-* -- 650
-:= -- 1123
-add.period$ -- 84
-call.type$ -- 15
-change.case$ -- 77
-chr.to.int$ -- 14
-cite$ -- 72
-duplicate$ -- 305
-empty$ -- 595
-format.name$ -- 121
-if$ -- 1488
+            743 strings with 9316 characters,
+and the built_in function-call counts, 10380 in all, are:
+= -- 990
+> -- 478
+< -- 16
++ -- 167
+- -- 144
+* -- 918
+:= -- 1605
+add.period$ -- 118
+call.type$ -- 22
+change.case$ -- 112
+chr.to.int$ -- 21
+cite$ -- 105
+duplicate$ -- 444
+empty$ -- 837
+format.name$ -- 178
+if$ -- 2102
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 121
-num.names$ -- 60
-pop$ -- 188
+missing$ -- 25
+newline$ -- 169
+num.names$ -- 88
+pop$ -- 287
 preamble$ -- 1
-purify$ -- 62
+purify$ -- 92
 quote$ -- 0
-skip$ -- 171
+skip$ -- 247
 stack$ -- 0
-substring$ -- 367
-swap$ -- 4
+substring$ -- 463
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 160
-warning$ -- 42
-while$ -- 71
+type$ -- 227
+warning$ -- 61
+while$ -- 100
 width$ -- 0
-write$ -- 252
-(There were 42 warnings)
+write$ -- 355
+(There were 61 warnings)

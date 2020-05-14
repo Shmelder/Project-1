@@ -1,4 +1,4 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,13 +39,23 @@ Olive~Jean Dunn.
 \newblock URL
   \url{https://www.tandfonline.com/doi/abs/10.1080/01621459.1961.10482090}.
 
-\bibitem[Gupta et~al.()Gupta, Eaton, Olkin, Perlman, Savage, and
-  Sobel]{gupta_inequalitites_1972}
-S.~Das Gupta, M.~L. Eaton, I.~Olkin, M.~Perlman, L.~J. Savage, and M.~Sobel.
-\newblock Inequalitites on the probability content of convex regions for
-  elliptically contoured distributions.
-\newblock The Regents of the University of California.
-\newblock URL \url{https://projecteuclid.org/euclid.bsmsp/1200514222}.
+\bibitem[Eaton and Perlman()]{eaton_multivariate_1991}
+Morris~L. Eaton and Michael~D. Perlman.
+\newblock Multivariate probability inequalities: Convolution theorems,
+  composition theorems, and concentration inequalities.
+\newblock 19:\penalty0 104--122.
+\newblock URL \url{https://zbmath.org/?q=an%3A0760.60017}.
+\newblock {MSC}2010: 60E15 = Inequalities; stochastic orderings {MSC}2010:
+  62H10 = Multivariate distribution of statistics.
+
+\bibitem[Friedman et~al.()Friedman, Hastie, and
+  Tibshirani]{friedman_regularization_2010}
+Jerome Friedman, Trevor Hastie, and Rob Tibshirani.
+\newblock Regularization paths for generalized linear models via coordinate
+  descent.
+\newblock 33\penalty0 (1):\penalty0 1--22.
+\newblock ISSN 1548-7660.
+\newblock URL \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2929880/}.
 
 \bibitem[Hochberg()]{hochberg_sharper_1988}
 Yosef Hochberg.
@@ -60,6 +70,17 @@ Sture Holm.
 \newblock A simple sequentially rejective multiple test procedure.
 \newblock 6:\penalty0 65--70.
 \newblock \doi{10.2307/4615733}.
+
+\bibitem[Lendle et~al.()Lendle, Schwab, Petersen, and Laan]{lendle_ltmle_2017}
+Samuel~D. Lendle, Joshua Schwab, Maya~L. Petersen, and Mark J. van~der Laan.
+\newblock ltmle: An r package implementing targeted minimum loss-based
+  estimation for longitudinal data.
+\newblock 81\penalty0 (1):\penalty0 1--21.
+\newblock ISSN 1548-7660.
+\newblock \doi{10.18637/jss.v081.i01}.
+\newblock URL
+  \url{https://www.jstatsoft.org/index.php/jss/article/view/v081i01}.
+\newblock Number: 1.
 
 \bibitem[{McKeague} and Qian()]{mckeague_adaptive_2015}
 Ian~W. {McKeague} and Min Qian.
@@ -77,16 +98,6 @@ Rupert G.~Jr Miller.
 \newblock Springer Series in Statistics. Springer-Verlag, 2 edition.
 \newblock ISBN 978-1-4613-8124-2.
 \newblock URL \url{https://www.springer.com/la/book/9781461381242}.
-
-\bibitem[Omelka and Pauly()]{omelka_testing_2012}
-M.~Omelka and M.~Pauly.
-\newblock Testing equality of correlation coefficients in two populations via
-  permutation methods.
-\newblock 142\penalty0 (6):\penalty0 1396--1406.
-\newblock ISSN 0378-3758.
-\newblock \doi{10.1016/j.jspi.2011.12.018}.
-\newblock URL
-  \url{http://www.sciencedirect.com/science/article/pii/S0378375811004630}.
 
 \bibitem[Pan et~al.()Pan, Kim, Zhang, Shen, and Wei]{pan_powerful_2014}
 Wei Pan, Junghi Kim, Yiwei Zhang, Xiaotong Shen, and Peng Wei.
@@ -106,11 +117,53 @@ Iosif Pinelis.
 \newblock URL
   \url{http://www.sciencedirect.com/science/article/pii/S0047259X13002534}.
 
+\bibitem[Polley and Laan()]{polley_super_2010}
+Eric Polley and Mark van~der Laan.
+\newblock Super learner in prediction.
+\newblock URL \url{https://biostats.bepress.com/ucbbiostat/paper266}.
+
+\bibitem[Rinott()]{rinott_convexity_1976}
+Yosef Rinott.
+\newblock On convexity of measures.
+\newblock 4\penalty0 (6):\penalty0 1020--1026.
+\newblock ISSN 0091-1798.
+\newblock URL \url{https://www.jstor.org/stable/2242963}.
+\newblock Publisher: Institute of Mathematical Statistics.
+
 \bibitem[S.~Holland and {DiPonzio}~Copenhaver()]{s._holland_improved_1988}
 Burt S.~Holland and Margaret {DiPonzio}~Copenhaver.
 \newblock Improved bonferroni-type multiple testing procedures.
 \newblock 104:\penalty0 145--149.
 \newblock \doi{10.1037/0033-2909.104.1.145}.
+
+\bibitem[Simon et~al.()Simon, Friedman, and Hastie]{simon_blockwise_2013}
+Noah Simon, Jerome Friedman, and Trevor Hastie.
+\newblock A blockwise descent algorithm for group-penalized multiresponse and
+  multinomial regression.
+\newblock URL \url{http://arxiv.org/abs/1311.6529}.
+
+\bibitem[Tibshirani et~al.()Tibshirani, Bien, Friedman, Hastie, Simon, Taylor,
+  and Tibshirani]{tibshirani_strong_2012}
+Robert Tibshirani, Jacob Bien, Jerome Friedman, Trevor Hastie, Noah Simon,
+  Jonathan Taylor, and Ryan~J. Tibshirani.
+\newblock Strong rules for discarding predictors in lasso-type problems.
+\newblock 74\penalty0 (2):\penalty0 245--266.
+\newblock ISSN 1369-7412.
+\newblock \doi{10.1111/j.1467-9868.2011.01004.x}.
+\newblock URL \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4262615/}.
+
+\bibitem[Tong()]{tong_multivariate_2012}
+Y.~L. Tong.
+\newblock \emph{The Multivariate Normal Distribution}.
+\newblock Springer Science \& Business Media.
+\newblock ISBN 978-1-4613-9655-0.
+\newblock Google-Books-{ID}: {FtHgBwAAQBAJ}.
+
+\bibitem[Van~der Vaart()]{van_der_vaart_asymptotic_2000}
+A.~W. Van~der Vaart.
+\newblock \emph{Asymptotic Statistics}.
+\newblock Cambridge University Press.
+\newblock ISBN 978-0-521-78450-4.
 
 \bibitem[Xu et~al.()Xu, Lin, Wei, and Pan]{xu_adaptive_2016}
 Gongjun Xu, Lifeng Lin, Peng Wei, and Wei Pan.
