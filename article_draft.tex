@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage[margin = 1in]{geometry}
 \usepackage[table]{xcolor}
-\usepackage{amsmath,amsthm,amsfonts,dsfont,mathtools,float,setspace, booktabs, algorithm,tcolorbox,xparse,colortbl,longtable,array,multirow,wrapfig,float,pdflscape,tabu, setspace, threeparttable,threeparttablex,makecell,natbib, pdfpages, url}
+\usepackage{amsmath,amsthm,amsfonts,dsfont,mathtools,float,setspace, booktabs, algorithm,tcolorbox,xparse,colortbl,longtable,array,multirow,wrapfig,float,pdflscape,tabu, setspace, threeparttable,threeparttablex,makecell, pdfpages, url}
+\usepackage{natbib}
 \usepackage{lineno}[displaymath, mathlines]
 \usepackage[normalem]{ulem}
 \usepackage[english]{babel}
@@ -56,43 +57,43 @@ In many scientific disciplines including genetics, neurology, and vaccine develo
 
 \section{Introduction}
 
-To broaden scientific understanding in a field it is typical to seek an understanding of the relationships between various observations.   It is common for the set of potentially related observations to be quite large while the number of truly related observations is small.  Thus an important first step is to find which variables are truly related to each other.
+To broaden scientific understanding in many fields, including XX, it is typical to seek an understanding of the relationships between various observations.   It is common for the set of potentially related observations to be quite large while the number of truly related observations is small.  Thus, an important first step is to find which variables are truly related to each other.
 %To discover these relationships, it is common to construct a mathematical or statistical model in which many covariates are used to predict the outcome of interest. Because the usefulnes of these models is dependent on the presence of an association between the outcome of interest and some number of the covariates, it is important to know if any associations exist before working to create a model.
-This initial screening step has become increasingly important as the research collect information on more and more potentially related observations. 
+This initial screening step has become increasingly important as researchers collect information on more and more potentially related observations. 
 
-One method to check for the existence of such relationships or associations is to test the association of each covariate with the outcome. Because of the many tests this procedure could consider, it is desirable for the testing procedure to account for the potentially large number of hypotheses that are simultaneously being tested when using this approach. Work with \textcolor{red}{simultaneous hypothesis testing}
-began with Tukey in 1953 \citep{miller_simultaneous_1981}.  Previous work by Bonferroni was used by \citep{dunn_estimation_1959,dunn_multiple_1961} to come up with some of the first multiple hypothesis testing procedures.  Further improvements were proposed by \citep{hochberg_sharper_1988,holm_simple_1979,s._holland_improved_1988}.  Bonferroni-based correction procedures are easy to apply to already existing tests, while guaranteeing family-wise error control. However because these tests ignore the joint distribution of the test statistics, they suffer from low power, especially in cases where the probability of rejecting each hypothesis is highly correlated. 
+One method to check for the existence of such relationships or associations is to test the association of each covariate with the outcome. Because of the many tests this procedure could consider, it is desirable for the testing procedure to account for the potentially large number of hypotheses that are simultaneously being tested when using this approach. Work on \textcolor{red}{simultaneous hypothesis testing}
+began with Tukey in 1953 \citep{miller_simultaneous_1981}.  Previous work by Bonferroni was used by \cite{dunn_estimation_1959,dunn_multiple_1961} to come up with some of the first multiple hypothesis testing procedures.  Further improvements to these methods were proposed by various authors \citep{hochberg_sharper_1988,holm_simple_1979,s._holland_improved_1988}.  Bonferroni-based correction procedures are easy to apply to already existing tests, while guaranteeing family-wise error control. However because these tests ignore the joint distribution of the test statistics, they suffer from low power, especially in cases where the rejections of the various hypotheses are highly correlated. 
 
-Newer procedures \citep{donoho_higher_2004} and \sh{add other papers here} using modern statistical theory to provide asymptotic guarantees for their methods and to account for the correlation between parameter estimates.  However, these methods are made for specific parameters and data generating mechanisms and do not account for the irregularity of the estimator on which their test is based. This irregularity can cause poor performance in scenarios in which the probablility of rejecting the null is far away from the $\alpha$ level of the test and one.  Subsequent work \citep{mckeague_adaptive_2015, pan_powerful_2014, xu_adaptive_2016} addressed these concerns by accounting for the flexible nature of these adaptive tests.  However these methods were still created for a specific measure of association and data generating mechanisms in mind. Thus while much has been done to improve the performance of tests in certain settings investigators may still use bonferroni based methods because advanced methods do not exist for their particular situation  As a result, investigators may still choose to use bonferroni correction based tests if they are interested in a different measure of association or are unsure of how deviations from the assumed data generating mechanism could effect the properties of the testing procedure. 
+Newer procedures using modern statistical theory provide asymptotic guarantees for their methods and account for the correlation between parameter estimates\citep[e.g.,][]{donoho_higher_2004}.  However, these methods are tailored to specific parameters and data generating mechanisms and do not account for the irregularity of the estimator upon which their test is based. This irregularity can cause poor performance in settings in which the null is false, but the probability of rejecting the null is far away from both the $\alpha$ level of the test and one.  Subsequent work addressed these concerns by accounting for the flexible nature of these adaptive tests \citep{mckeague_adaptive_2015, pan_powerful_2014, xu_adaptive_2016}.  However each of these methods was still created for a specific measure of association and class of data generating mechanisms. Thus while much has been done to improve the performance of tests in certain settings, investigators may still use Bonferroni based methods because advanced methods do not exist for their particular situation  As a result, investigators may still choose to use Bonferroni correction based tests if they are interested in a different measure of association or are unsure of how deviations from the assumed data generating mechanism could impact the properties of the testing procedure. 
 
-In this article we propose a testing procedure that can be used for a wide variety of data generating mechanisms and parameters of interest. This test also achieves comparable power to tailor made procedures in some settings. Section \ref{sec:Working Examples} describes the data generating mechanisms and the corresponding parameters that are considered to evaluate the performance of the test and the competing test.  Section \ref{sec:prop_test_proc} describes the testing procedure.  Section \ref{sec:theorems} provides the theoretical guarantees of the described procedure. Section \ref{sec:sim_stdy} shows the performance of our testing procedure in the three considered simulation settings. Section \ref{sec:data_app} shows the application of our method to real world data.  Section \ref{sec:discuss} summarizes the findings of this article and notes potential weaknesses and extensions of our procedure.
+In this article we propose a testing procedure that can be used for a wide variety of data generating mechanisms and parameters of interest. This test also achieves comparable power to tailor made procedures in several settings \textcolor{red}{Mention the fact that the settings used were the ones people used to show off their own methods  (also end sentence with fact that our procedure is adaptive)}. Section \ref{sec:Working Examples} describes a variety of examples in which our method applies.  Section \ref{sec:prop_test_proc} introduces the testing procedure.  Section \ref{sec:theorems} provides the theoretical guarantees of the procedure. Section \ref{sec:sim_stdy} demonstrates the performance of our testing procedure in the three simulation settings. Section \ref{sec:discuss} describes potential weaknesses of our procedure and extensions to overcome them.
 
 %This is done using a two step procedure.  In the first step, the limiting distribution of the entire vector of parameter estimates is estimated.  Next, an adaptive procedure selects a transformation of the vector of parameter estimates and distribution which is guessed provides the best power.  P-values are obtained using a permutation procedure. 
 
 \section{Working Examples}
 \label{sec:Working Examples}
-Throughout all examples let $\rvo_1, \dots, \rvo_n$ be independent identically distributed draws from some distribution $\disto$, and let $\boldsymbol{\rvo} = \{\rvo_1, \dots, \rvo_n\}$. Let $\rvo_i = \left(Y_i, W_{1 i}, \dots, W_{d i}\right), \ i \in \{1, \dots n\}$ where $Y$ is the outcome of interest, and each $W$ is a covariate. Let $\psi_1 = \Psi_1(\disto), \dots, \psi_a = \Psi_a(\disto)$ be measures of association between $Y$ and some combination of the $W_j$s.  While the results found in this article are valid for any integer $a$, for the remainder of this article assume $a = d$, the number of covariates. Also in this article, let $\psi_j$ correspond to a measure of association between $Y$ and $W_j$.  The null hypothesis for our test will be the strong null: 
+In all examples, we let $\rvo_1, \dots, \rvo_n$ be independent identically distributed draws from some distribution $\disto$ and define $\boldsymbol{\rvo} = \{\rvo_1, \dots, \rvo_n\}$. Let $\rvo_i = \left(Y_i, W_{1 i}, \dots, W_{d i}\right)$ for $i \in \{1, \dots n\}$, where $Y$ is the outcome of interest and each $W$ is a covariate. Let $\psi_1 = \Psi_1(\disto), \dots, \psi_a = \Psi_a(\disto)$ be measures of association between $Y$ and some combination of the covariates.  While the results in this article are valid for any integer $a$, for the remainder of this article we assume $a = d$, the number of covariates. Also in this article, let $\psi_j$ correspond to a measure of association between $Y$ and $W_j$.  We will aim to test the strong null versus the complementary alternative: 
 \begin{align*}
 H_0: \psi_1 = \psi_2 = \dots = \psi_a = 0 \hspace{0.1cm}\text{  versus  } \hspace{0.1cm} H_1: \psi_j \neq 0 \text{ for some } j \in \{1, \dots, a\}.
 \end{align*}
-Finally, let $\mathscr{M}$ denote the set of all possible distributions, and let $\mathscr{M}_0  \subset \mathscr{M}$ be the subset of distributions in $\mathscr{M}$ satisfying $H_0$. We consider three different simulated data settings to study the performance of the test. 
+Finally, let $\mathscr{M}$ denote the set of all possible distributions that could have generated the data, and let $\mathscr{M}_0  \subset \mathscr{M}$ be the subset of distributions in $\mathscr{M}$ satisfying $H_0$. We note that $\mathscr{M}$ may be nonparametric, or may be restricted based on subject matter knowledge. We consider three different simulated data settings to study the performance of the test. 
 
 \subsection{Correlation Parameter}
 In the first example, our method is compared to a Bonferroni correct marginal testing method and the parametric bootstrap analog of the adaptive resampling test described in \citep{zhang_comment_2015} that built on the adaptive resampling test proposed by \citep{mckeague_adaptive_2015}.  This example uses the same settings as those used in the first example of \citep{mckeague_adaptive_2015}.  The parameter of interest $\psi_j(P)$ is the correlation between the outcome of interest and the $j$'th covariate. The vector of covariates in this setting will be generated from a normal distribution with mean zero and a variance covariance of $\Sigma$ with $\Sigma_{ij}$ equal to $\rho$ when $i \neq j$ and equal to 1 when $i = j$. Three different models for the outcome of interest ($Y$) will be considered. For every setting $\varepsilon \sim N(0, 1)$ and is independent of all $W$. In the first setting $Y = \varepsilon$, in the second setting $Y = W_1 / 4 + \varepsilon$, and in the third setting $Y = \sum_{k = 1}^{10} \beta_k W_k + \varepsilon$ where $\beta_k = 0.15$ for $k = \{1, \dots, 5\}$, and $\beta_k = -0.1$ for $k = \{6 \dots 10\}$.  Sample sizes of $100$ and $200$, dimensions of $10$, $50$, $100$, $150$, and $200$, and correlations $(\rho)$ of  $0, 0.5$, and $0.8$ are considered.  All combinations of model, sample size, dimension and correlation are considered, and the performance of each test is measured for every settings.
 
 \subsection{Missing Data Example}
 \label{sec:missing_data}
-In the second example $Y$ is binary variable and $\Delta$ is a missingness indicator.  When $\Delta = 0$, $Y$ is not observed. The parameter of interest is the risk ratio under a poission working model for the probability that $Y = 1$.
+In the second example $Y$ is a binary variable and $\Delta$ is a missingness indicator.  When $\Delta = 0$, $Y$ is not observed. The parameter of interest is the risk ratio under a Poisson working model for the probability that $Y = 1$:
 \begin{align*}
 	\Psi_{j}\left(P^{\text{full}}\right) &= \frac{\text{Cov}\left(\log\left(Pr \left(Y = 1 |  W_j\right)\right), W_j\right)}{\text{Var}(W_j)}.
 \end{align*}
-The identifying assumption is $\Delta \indep Y | W$, and when this assumption holds the corresponding identifiable parameter is:
+The identifying assumption is $\Delta \indep Y | W$, and when this assumption holds the corresponding identifiable parameter is
 \begin{align*}
 	\tilde{\Psi}_{j}\left(P^{\text{obs}}\right)&= \frac{\text{Cov}\left(\log\left(E\left[Pr \left(\Delta  Y = 1 | \Delta = 1, W = W\right) |  W_j\right]\right), W_j\right)}{\text{Var}(W_j)}.
 \end{align*}
-The data are drawn from a binomial model:
+The data are drawn from a binomial logistic model:
 \begin{align*}
-    \log(Pr(Y = 1 | W)) = \beta_0 + W^\top \beta.
+\text{logit}(Pr(Y = 1 | W)) = \beta_0 + W^\top \beta.
 \end{align*}
 and in all settings, the probability of missingness is given by 
 \begin{align*}
@@ -101,11 +102,11 @@ and in all settings, the probability of missingness is given by
 	\text{logit}(\pr(A = 1 | w)) = -0.25 + 1 w_{d - 1} - 1.5 w_d \text{ where d is the number of covariates.} 
 \end{align*}
 
-There will be three settings considered which determine  the values of the $\beta$s in the data generating model.  While it is not necessary for the covariates to be normally distributed, in each setting the vector $\boldsymbol{W}$ is draw from a multivariate normal with mean zero and covariance matrix $\textcolor{blue}{\Sigma_{DE2}}$ where $\Sigma_{DE2, i, j} = 1$ for $i = j$ and $0.6$ for $i \neq j$. $A$ is drawn from a binomial distribution independent from $W$.  For all three settings 
+There will be three settings considered which determine  the $\beta$ values of the data generating model.  While it is not necessary for the covariates to be normally distributed, in each setting the vector $\boldsymbol{W}$ is draw from a multivariate normal with mean zero and covariance matrix $\textcolor{blue}{\Sigma_{DE2}}$ where $\Sigma_{DE2, i, j} = 1$ for $i = j$ and \textcolor{red}{(Check this $0.6$)} for $i \neq j$. $A$ is drawn from a binomial distribution independent from $W$.  For all three settings 
 \begin{align*}
-	\text{logit}\left[Pr(Y = 1 | w, a)\right] = \sum_{i = 1}^{d} \beta_{i} w_i
+	\text{logit}\left[Pr(Y = 1 | w, a)\right] = \sum_{i = 1}^{d} \beta_{i} w_i.
 \end{align*}
-In the first setting $\beta_1, \dots, \beta_d = 0$.  In the second setting $\beta_1 = 3$ and $\beta_2, \dots,  \beta_d = 0$.  In the last setting, $\beta_1, \dots, \beta_5 = 1$, $\beta_6, \dots, \beta_{10} = -1$ and $\beta_{11}, \dots, \beta_d = 0$.  Data are generated using all three settings with every possible combination of sample size ($n = 5,000$, or $10,000$), and dimension ($d = 10, 50, 100, 150$, or $200$).
+In the first setting $\beta_1, \dots, \beta_d = 0$.  In the second setting $\beta_1 = 3$ and $\beta_2, \dots,  \beta_d = 0$.  In the last setting, $\beta_1, \dots, \beta_5 = 1$, $\beta_6, \dots, \beta_{10} = -1$ and $\beta_{11}, \dots, \beta_d = 0$.  Data are generated using all three settings with every possible combination of sample size ($n = 5000$, or $10000$), and dimension ($d = 10, 50, 100, 150$, or $200$).
 
 \subsection{Marginal Structural Model Example}
 \label{sec:msm_data}
@@ -113,9 +114,9 @@ The third data example is a marginal structural model in which we test if the av
 \begin{align}
 \text{logit}\left[Pr(Y^{(a)} = 1 | w)\right] = \beta_0 + \beta_1 a + \beta_2 w_j + \beta_3 w_j a \label{eqn:DE2param}
 \end{align}
-in which our parameter of interest is:
+in which our parameter of interest is the following projection of $P$ onto this working model:
 \begin{align*}
-(\beta_0^*, \beta_1^*, \beta_2^*, \beta_3^*) = \text{argmin}_{\beta_0, \beta_1, \beta_2, \beta_3}\int\left\{\text{logit}\left[Pr\left(Y^{(a)} = 1 | w\right)\right] - (\beta_0 + \beta_1 a + \beta_2w_j + \beta_3 w_j a) \right\}^2 dP(w, a)
+(\beta_0^*, \beta_1^*, \beta_2^*, \beta_3^*) = \text{argmin}_{\beta_0, \beta_1, \beta_2, \beta_3}\int\left\{\text{logit}\left[Pr\left(Y^{(a)} = 1 | w\right)\right] - (\beta_0 + \beta_1 a + \beta_2w_j + \beta_3 w_j a) \right\}^2 dP(w, a).
 \end{align*}
 The parameter of interest is $\beta_3^*$, but it is worth noting that this parameter is different from a usual logistic regression parameter because we are marginalizing over all other $w_i$.
 
@@ -126,7 +127,7 @@ In all simulation settings the working model is used to take draws from $Y$. In 
 \end{align*}
 
 In every setting, $\alpha = 0.2$, $\beta_1, \dots, \beta_{d/2} = 2/\sqrt{d}$, and $\beta_{d/2}, \dots, \beta_{d}  = 0$.  In the first (null) setting, $\gamma_{1}, \dots, \gamma_{d} = 0$.  In the second setting, $\gamma_{1} = 3$ and $\gamma_{2}, \dots, \gamma_{d} = 0$.  In the final setting $\gamma_{1}, \dots, \gamma_{5} = 0.15$, $\gamma_{6}, \dots, \gamma_{10} = -0.15$, and $\gamma_{11}, \dots, \gamma_{d} = 0$.
-Data are generated using all three settings with every possible combination of sample size ($n = 1,000$, or $2,000$), and dimension ($d = 10, 30$, or $75$).
+Data are generated using all three settings with every possible combination of sample size ($n = 1000$, or $2000$), and dimension ($d = 10, 30$, or $75$).
 
 
 % \subsection{\sh{Something else possibly Tim's parameter (has something to do with survival)}}
@@ -135,11 +136,11 @@ Data are generated using all three settings with every possible combination of s
 \section{Proposed Testing Procedure}
 \label{sec:prop_test_proc}
 
-For some test statistic $\tst$, any test of $H_0 : \disto \in \mathscr{M}_0$ versus $H_1 : \disto \not\in \mathscr{M}_0$ can be characterized by checking if $\tst$ falls within acceptance region $\Theta_0(\disto) \subset \mathbb{R}^d$.  Letting $\tst \xrightarrow{P_0} \rvv \sim \distv(\disto)$ for any $P_0 \in \mathscr{M}_0$, the region $\Theta_0(\disto)$ can be chosen so the probability of rejection under the null is controlled asymptotically:
+For some test statistic $\tst$, any test of $H_0 : \disto \in \mathscr{M}_0$ versus $H_1 : \disto \not\in \mathscr{M}_0$ can be characterized by checking if $\tst$ falls within acceptance region $\Theta_0(\disto) \subset \mathbb{R}^d$.  Letting $\tst \xrightarrow{P} \rvv \sim \distv(\disto)$ whenever $P \in \mathscr{M}_0$, the region $\Theta_0(\disto)$ can be chosen so the probability of rejection under the null is controlled asymptotically:
 \begin{align}
-  Pr_{\distv}\{\rvv \not \in \Theta_0(P)\} = 1 - \alpha \text{ for every } P \in \mathscr{M}_0.\label{eqn:alpha_rej}
+  Pr_{\distv(P)}\{\rvv \not \in \Theta_0(P)\} = 1 - \alpha \text{ for every } P \in \mathscr{M}_0.\label{eqn:alpha_rej}
 \end{align}
-While there are many regions satisfying \eqref{eqn:alpha_rej},  we focus for now on a particular class of regions defined using $\ell_p$ norms which will naturally lead to a straightforward testing procedure. For simplicity, first consider regions defined using an $\ell_2$ norm:
+Hereafter, when it will not cause confusion, $\distv(P)$ will be written as $\distv$. While there are many regions satisfying \eqref{eqn:alpha_rej},  we focus for now on a particular class of regions defined using $\ell_p$ norms which will naturally lead to a straightforward testing procedure. For simplicity, we start by considering regions defined using an $\ell_2$ norm:
 \begin{align}
 	\Theta_0(r) = \left\{\omega : \|\omega\|_2 \leq r\right\}. \label{eqn:region}
 \end{align}
@@ -151,7 +152,7 @@ A region satisfying \eqref{eqn:alpha_rej} and \eqref{eqn:region} has a radius de
 To construct a test using the region defined above, let $\hat{\boldsymbol{\Psi}} : \mathbb{R}^d \to \mathbb{R}$ be an estimator of $\boldsymbol{\psi}$, and let $\Hat{\boldsymbol{\psi}} \equiv \hat{\boldsymbol{\Psi}}(x)$ be an estimate of $\boldsymbol{\psi}$. Letting $\tst \equiv \sqrt{n}\hat{\boldsymbol{\psi}}$, suppose for now that  $\tst$ converges in law to a normal distribution $\distv(P)$ when $P$ is contained in the model space  $\mathcal{M}_0$. The test can be defined by 
 \begin{align}
 \label{eqn:simp_test}
-	\text{reject } H_0 \text{ if } \|\rnp\|_2 \geq r_\alpha(P_0),
+	\text{reject } H_0 \text{ if } \|\rnp\|_2 \geq r_\alpha(P),
 \end{align} 
 and the corresponding p-values are defined by $
 	\text{Pr}_\distv(\|\rvv\|_2 \geq \|\rnp\|_2)$.
@@ -205,7 +206,6 @@ We can define a test using $\Gamma$:
 % \textcolor{blue}{I don't understand the end of this sentence}. 
 % While the the above test has nice properties (type one error control, consistency), it is not clear how this test will perform compared to other tests with similar properties.
 
-Considering the $\Gamma$ for which it is possible to compare across norms, we can now define a new, adaptive $\Gamma^*$ which is the pointwise maximum of all of the considered $\Gamma$s. First define $\Gamma_{1}(x, \Sigma), \dots, \Gamma_{p}(x, \Sigma)$ as collection of performance metrics which only differ by the norm used in their definition. Next, define
 % by defining a $\Gamma$ to those defined earlier, except the optimal norm is selected, and the corresponding summary value of $\Gamma$ with the optimal norm is returned.  For example, if we had $p$ different norms, $\norm_1, \dots, \norm_p$ and some summary function $\Gamma_\vmat(x, \|\cdot\|)$, we would define the adaptive version of $\Gamma$ as
 \begin{align*}
 	\Gamma^*(x, \Sigma) = \min\left\{\Gamma_{1}(x, \Sigma), \dots, \Gamma_{p}(x, \Sigma)\right\}.
@@ -402,32 +402,35 @@ Because $H_0$ is true for the first setting, we expect the rejection rates in th
 One setting in which the adaptive test performs poorly is in settings in which a single covariate is correlated with the outcome of interest and no covariates are correlated as seen for model 2 in figure \ref{fig:uncor}. This behavior could be due to the parameter estimates inability to be sparse even in settings when sparsity occurs.  The many small errors in the parameter estimate across many covariates leads to a preference for the $\ell_2$ norm that obtains an overly optimistic estimate of power due to the accumulation of many small effects across all the covariates.
 
 
-\section{Data Application}
-\label{sec:data_app}
-\sh{Data from Peter Gilbert}
+% \section{Data Application}
+% \label{sec:data_app}
+% \sh{Data from Peter Gilbert}
 
 \section{Discussion}
 \label{sec:discuss}
-When developing anything there is frequently a trade off to between generalizability and performance. However the reduction in power of bonferroni-based methods compared to taylor made procedures is often larger than is needed.  We have developed a generalizable testing procedure that still can outperform bonferroni based methods.  We have demonstrated this in section \ref{sec:sim_stdy} and shown novel settings in which the method can also be performed.  These settings show that our test can be applied to parameters in non-standard sampling schemes (see section \ref{sec:missing_data}) and complex parameters (see section \ref{sec:msm_data}).  
+%When developing anything there is frequently a trade off to between generalizability and performance. However the reduction in power of Bonferroni-based methods compared to taylor made procedures is often larger than is needed.  We have developed a generalizable testing procedure that still can outperform Bonferroni based methods.  We have demonstrated this in section \ref{sec:sim_stdy} and shown novel settings in which the method can also be performed.  These settings show that our test can be applied to parameters in non-standard sampling schemes (see section \ref{sec:missing_data}) and complex parameters (see section \ref{sec:msm_data}).  
 
-Our procedure does rely on asymptotic results to achieve correct type one error rates which can cause issues when the number of covariates of interest is larger than sample size. To address this issue, in certain cases a our test can be carried out using permutations of the data to obtain better finite sample properties. 
+The general hypothesis testing procedure that we have described relies on asymptotic results to achieve correct type one error rates.  This can cause issues when the number of covariates of interest is larger than the sample size. To address this issue, in certain cases our test can be carried out using permutations of the data to obtain better finite sample properties. 
+
 %\textcolor{blue}{This is done by repeating our estimation procedure many times after randomly permuting the outcome variable.  The method is used in our first data example, and could be used for our third data example. In certain settings with more complicated sampling schemes, the permutation based test is more difficult to implement because many of the outcomes are not even observed.}
 
-While we have outlined some of the ways in which our method can be used, there are other possible applications and improvements. 
+% While we have outlined some of the ways in which our method can be used, there are other possible applications and improvements.
 
-While we focused on the studying the limiting distribution of $\sqrt{n}\hat{\psi}$ once can also consider the limiting distribution of $\sqrt{n}\hat{\Sigma}^{-1/2}\hat{\psi}$.  This estimator will always have a multivariate normal limiting distribution with an identity covariance matrix, which simplifies notation by always having a single limiting distribution.  It also simplifies proofs, and potentially could allow for analytical solutions for which norm (or weighted average of norms) would provide the best power.  However, this estimator runs into issues when $p > n$ and $\hat{\Sigma}^{-1/2}$ becomes impossible to estimate because of the rank deficiency of the variance estimator.  While this problem still technically exist when indexing our $\Gamma$s by $\hat{\Sigma}$, using a multiplier bootstrap to take draws from $N(0, \hat{\Sigma})$ avoids the computation issues of having a degenerate estimate of the limiting distributions variance matrix.
+While we focused on the studying the limiting distribution of $\sqrt{n}\hat{\psi}$ once can also consider the limiting distribution of $\sqrt{n}\hat{\Sigma}^{-1/2}\hat{\psi}$.  This estimator will always have a multivariate normal limiting distribution with an identity covariance matrix, which simplifies notation by always having a single limiting distribution.  It also simplifies proofs, and potentially could allow for analytical solutions for which norm (or weighted average of norms) would provide the best power.  However, this estimator runs into issues when $p > n$ and $\hat{\Sigma}^{-1/2}$ becomes impossible to estimate because of the rank deficiency of the variance estimator.  While this problem still technically exists when indexing our $\Gamma$s by $\hat{\Sigma}$, using a multiplier bootstrap to take draws from $N(0, \hat{\Sigma})$ avoids the computation issues of having a degenerate estimate of the limiting distributions variance matrix.
 
 \textcolor{blue}{Mention choice of norms and choice of performance metric}
 
-While changing the test statistic as described above has major hurdles to overcome to be implemented in $p > n$ settings, there are other extensions or generalizations of our procedure that are possible without much change.  While we considered one set of $\Gamma$ funcitons in this article, any set of reasonable $\Gamma$ functions could be used.  These $\Gamma$ functions could even be picked by machine learning methods used for classification.  The classifier would provide a probability that any observation was generated from the null distribution.  Doing this provides a more rich set of $\Gamma$ over which to select, and has the potential to provide large increases in test performance.  One would expect that a classifier would perform better better when data are generated at an alternative versus at the null.  Thus one could reject when the classification performance is especially large.  
+%While changing the test statistic as described above has major hurdles to overcome to be implemented in $p > n$ settings, there are other extensions or generalizations of our procedure that are possible without much change.  While we considered one set of $\Gamma$ functions in this article, any set of reasonable $\Gamma$ functions could be used.  
+%These functions could even be picked by machine learning methods used for classification.  The classifier would provide a probability that any observation was generated from the null distribution.  Doing this provides a more rich set of $\Gamma$ over which to select, and has the potential to provide large increases in test performance.  One would expect that a classifier would perform better better when data are generated at an alternative versus at the null.  Thus one could reject when the classification performance is especially large.  
 
-While our procedure currently only selects a single norm to calculate the test statistic, it is possible to also consider an estimator that is a weighted average of the many different norms.  The weights would be estimates of the probability that each norm was optimal. These probabilities could be estimated by taking many draws from a normal with mean $\sqrt{n}\hat{\boldsymbol{\psi}}$ and variance $\hat{\Sigma}$ and finding the optimal norm for each of these draws.  This method while being more computationally costly, could potentially be shown theoretically to be optimal in the sense that it would maximize the average power of all tests based on the specified family of norms for each local alternative. 
+While our procedure currently only selects a single norm to calculate the test statistic, it is possible to also consider an estimator that is a weighted average of the many different norms.  The weights would be estimates of the probability that each norm was optimal. These probabilities could be estimated by taking many draws from a normal with mean $\sqrt{n}\hat{\boldsymbol{\psi}}$ and variance $\hat{\Sigma}$ and finding the optimal norm for each of these draws.  
+%This method while being more computationally costly, could potentially be shown theoretically to be optimal in the sense that it would maximize the average power of all tests based on the specified family of norms for each local alternative. 
 
-While $\ell_p$ norms were used throughout this paper, one issue observed with our test is that it selects the $\ell_2$ norm more frequently than it should, likely because of the many small estimates for parameters that are not associated with the outcome.  One could consider a slightly modified norm that sets to zero all component values of the vector that are less than some value.  This would hopefully solve issues of small values close to zero causing incorrect selection of norms that perform well when there are many small effects.
+% While $\ell_p$ norms were used throughout this paper, one issue observed with our test is that it selects the $\ell_2$ norm more frequently than it should, likely because of the many small estimates for parameters that are not associated with the outcome.  One could consider a slightly modified norm that sets to zero all component values of the vector that are less than some value.  This would hopefully solve issues of small values close to zero causing incorrect selection of norms that perform well when there are many small effects.
 
-\textcolor{blue}{add notes about limitation of our method (need to find influence function).  Also discuss difficulty with convergence when using the parametric bootstrap.}
+\textcolor{blue}{add notes about limitation of our method (need to find influence function).  Add notes of computeraization.  Also discuss difficulty with convergence when using the parametric bootstrap.}
 
-In this article chose tests in which each parameter corresponded to a single covariate, and each covariate only had a single corresponding parameter.  However it would also be possible to have tests where each parameter corresponded to a set of many covariates or each covariate or group of covariates had multiple measures of association.
+% In this article chose tests in which each parameter corresponded to a single covariate, and each covariate only had a single corresponding parameter.  However it would also be possible to have tests where each parameter corresponded to a set of many covariates or each covariate or group of covariates had multiple measures of association.
 
 \section{Conclusion}
 
@@ -1055,7 +1058,7 @@ Under local alternatives,
 	\begin{align*}
 		\Gamma^*_{\Sigma} \equiv \max\left\{\Gamma_{1, \Sigma}, \dots, \Gamma_{d, \Sigma}\right\}
 	\end{align*}
-	is also continuos with respect to $\Sigma$ and $x$. Under local alternatives, $\sqrt{n} \hat{\boldsymbol{\psi}} \xrightarrow{d} Z + \underline{h}$ and $\hat{\Sigma} \xrightarrow{p} \Sigma$.   It follows from the continuous mapping theorem that $\Gamma^*_{\hat{\Sigma}}(\sqrt{n} \hat{\boldsymbol{\psi}}) \xrightarrow{d} \Gamma^*_{\Sigma}(Z + \underline{h}) $
+	is also continuous with respect to $\Sigma$ and $x$. Under local alternatives, $\sqrt{n} \hat{\boldsymbol{\psi}} \xrightarrow{d} Z + \underline{h}$ and $\hat{\Sigma} \xrightarrow{p} \Sigma$.   It follows from the continuous mapping theorem that $\Gamma^*_{\hat{\Sigma}}(\sqrt{n} \hat{\boldsymbol{\psi}}) \xrightarrow{d} \Gamma^*_{\Sigma}(Z + \underline{h}) $
 \end{proof}
 
 
