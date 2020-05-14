@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex article_draft"] 1589417752 "article_draft.aux" "article_draft.bbl" "article_draft" 1589417758
+["bibtex article_draft"] 1589417752 "article_draft.aux" "article_draft.bbl" "article_draft" 1589418159
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
   "article_draft.aux" 1589417757 9199 b4e7c1f344c7305c97a9ce8dc5da60e2 "pdflatex"
   "paper_bib.bib" 1588625657 45839 c8f3a9dfce3f09e39acbfc945c10ff59 ""
   (generated)
-  "article_draft.bbl"
   "article_draft.blg"
-["pdflatex"] 1589417757 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1589417758
+  "article_draft.bbl"
+["pdflatex"] 1589417757 "/Users/adamelder/Project-1/article_draft.tex" "/Users/adamelder/Project-1/article_draft.pdf" "article_draft" 1589418159
   "/Users/adamelder/Project-1/article_draft.aux" 1589417757 9199 b4e7c1f344c7305c97a9ce8dc5da60e2 ""
   "/Users/adamelder/Project-1/article_draft.tex" 1589417756 121323 7d696af9628f815e43838609fdddb801 ""
-  "/dev/null" 1589417729 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1589418154 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/local/texlive/2019/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -225,7 +225,7 @@
   "uncor.jpg" 1567791447 463283 57698fc4195acc05fed7ca83696451da ""
   (generated)
   "/Users/adamelder/Project-1/article_draft.log"
-  "article_draft.pdf"
-  "article_draft.aux"
   "article_draft.log"
+  "article_draft.aux"
   "/Users/adamelder/Project-1/article_draft.pdf"
+  "article_draft.pdf"
